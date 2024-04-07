@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <_LastSelectedProfileId>C:\Users\Windows 10\Tareas\2023\segundo semestre\pg_2\CODIGO\SistemaParaPrediccionDeVentas\Properties\PublishProfiles\ClickOnceProfile.pubxml</_LastSelectedProfileId>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Update="frmPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Vista\frmConfiguracion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Vista\frmGraficas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Vista\frmPredecir.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Vista\frmReporteComparativo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Vista\frmReportPrediccionActual.cs">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="DataSetComparativo.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="DataSetPrediccionActual.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,104 @@
+﻿{
+  "Scenario": "Regression",
+  "DataSource": {
+    "Type": "TabularFile",
+    "Version": 1,
+    "FilePath": "C:\\Users\\Windows 10\\Tareas\\2023\\segundo semestre\\pg_2\\DATOS\\CSV\\S10_1678.csv",
+    "Delimiter": ";",
+    "DecimalMarker": ".",
+    "HasHeader": true,
+    "ColumnProperties": [
+      {
+        "ColumnName": "fecha",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 4
+      },
+      {
+        "ColumnName": "cantidad",
+        "ColumnPurpose": "Label",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 4
+      }
+    ]
+  },
+  "Environment": {
+    "Type": "LocalCPU",
+    "Version": 1
+  },
+  "RunHistory": {
+    "Version": 3,
+    "Type": "Result",
+    "Trials": [
+      {
+        "Version": 1,
+        "Type": "Trial",
+        "TrainerName": "FastForestRegression",
+        "Score": -0.15335542630248916,
+        "RuntimeInSeconds": 1.032,
+        "Parameter": {
+          "_SCHEMA_": "e0 * e1 * e3",
+          "e0": {
+            "OutputColumnNames": [
+              "fecha"
+            ],
+            "InputColumnNames": [
+              "fecha"
+            ]
+          },
+          "e1": {
+            "InputColumnNames": [
+              "fecha"
+            ],
+            "OutputColumnName": "Features"
+          },
+          "e3": {
+            "NumberOfTrees": 4,
+            "NumberOfLeaves": 4,
+            "FeatureFraction": 1.0,
+            "LabelColumnName": "cantidad",
+            "FeatureColumnName": "Features"
+          }
+        }
+      }
+    ],
+    "Estimators": {
+      "e0": "ReplaceMissingValues",
+      "e1": "Concatenate",
+      "e2": "FastTreeRegression",
+      "e3": "FastForestRegression",
+      "e4": "LbfgsPoissonRegressionRegression",
+      "e5": "SdcaRegression"
+    },
+    "Schema": "e0 * e1 * (e2 + e3 + e4 + e5)",
+    "MetricName": "RSquared",
+    "ModelFilePath": "C:\\Users\\Windows 10\\Tareas\\2023\\segundo semestre\\pg_2\\CODIGO\\SistemaParaPrediccionDeVentas\\MLModel.mlnet"
+  },
+  "Type": "TrainingConfig",
+  "Version": 4,
+  "TrainingOption": {
+    "Version": 2,
+    "Subsampling": false,
+    "Tuner": "eci-cfo",
+    "Type": "RegressionTrainingOption",
+    "TrainingTime": 10,
+    "OptimizeMetric": "RSquared",
+    "LabelColumn": "cantidad",
+    "AvailableTrainers": [
+      "SDCA",
+      "LBFGS",
+      "LGBM",
+      "FASTTREE",
+      "FASTFOREST"
+    ],
+    "ValidationOption": {
+      "Version": 0,
+      "Type": "CrossValidationValidationOption",
+      "NumberOfFolds": 5
+    }
+  }
+}

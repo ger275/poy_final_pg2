@@ -1,0 +1,69 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Remove="Vista\Reportes\ReporteComparativo.rdlc" />
+    <None Remove="Vista\Reportes\ReportePrediccionActual.rdlc" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Vista\Reportes\ReporteComparativo.rdlc" />
+    <EmbeddedResource Include="Vista\Reportes\ReportePrediccionActual.rdlc">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.ML" Version="3.0.0-preview.23266.6" />
+    <PackageReference Include="Microsoft.ML.FastTree" Version="3.0.0-preview.23266.6" />
+    <PackageReference Include="Plotly.NET" Version="3.0.1" />
+    <PackageReference Include="ReportViewerCore.WinForms" Version="15.1.18" />
+    <PackageReference Include="ScottPlot.WinForms" Version="4.1.67" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Viewer">
+      <HintPath>..\..\..\..\..\..\Downloads\FastReport.Community.2023.2.0\FastReport.Community.2023.2.0\Viewer.exe</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="DataSetComparativo.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>DataSetComparativo.xsd</DependentUpon>
+    </Compile>
+    <Compile Update="DataSetPrediccionActual.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>DataSetPrediccionActual.xsd</DependentUpon>
+    </Compile>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="DataSetComparativo.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetComparativo.Designer.cs</LastGenOutput>
+    </None>
+    <None Update="DataSetPrediccionActual.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetPrediccionActual.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup Label="MLModel">
+    <None Include="MLModel.mlnet">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+</Project>
