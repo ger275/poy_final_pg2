@@ -201,7 +201,7 @@
             btnCargarProductos.ForeColor = Color.Gainsboro;
             btnCargarProductos.Image = (Image)resources.GetObject("btnCargarProductos.Image");
             btnCargarProductos.ImageAlign = ContentAlignment.TopCenter;
-            btnCargarProductos.Location = new Point(364, 114);
+            btnCargarProductos.Location = new Point(364, 110);
             btnCargarProductos.Name = "btnCargarProductos";
             btnCargarProductos.Size = new Size(234, 112);
             btnCargarProductos.TabIndex = 8;

@@ -29,9 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmConfiguracion));
-            panel1 = new Panel();
+            panelTitulo = new Panel();
             button2 = new Button();
-            button1 = new Button();
             panel5 = new Panel();
             label1 = new Label();
             btnMaximizar = new Button();
@@ -40,36 +39,39 @@
             panel2 = new Panel();
             panel3 = new Panel();
             panel4 = new Panel();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
+            txtHost = new TextBox();
+            txtUsuario = new TextBox();
             label2 = new Label();
             label3 = new Label();
-            textBox3 = new TextBox();
+            txtContrasena = new TextBox();
             label4 = new Label();
-            comboBox1 = new ComboBox();
+            cmbServidor = new ComboBox();
             label5 = new Label();
             textBox4 = new TextBox();
             label6 = new Label();
-            textBox5 = new TextBox();
+            txtPuerto = new TextBox();
             label7 = new Label();
-            panel1.SuspendLayout();
+            btnGuardar = new Button();
+            btnModificar = new Button();
+            btnCancelar = new Button();
+            panelTitulo.SuspendLayout();
             SuspendLayout();
             // 
-            // panel1
+            // panelTitulo
             // 
-            panel1.BackColor = Color.FromArgb(78, 78, 78);
-            panel1.Controls.Add(button2);
-            panel1.Controls.Add(button1);
-            panel1.Controls.Add(panel5);
-            panel1.Controls.Add(label1);
-            panel1.Controls.Add(btnMaximizar);
-            panel1.Controls.Add(btnRestaurar);
-            panel1.Controls.Add(btnCerrar);
-            panel1.Dock = DockStyle.Top;
-            panel1.Location = new Point(0, 0);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(950, 74);
-            panel1.TabIndex = 3;
+            panelTitulo.BackColor = Color.FromArgb(78, 78, 78);
+            panelTitulo.Controls.Add(button2);
+            panelTitulo.Controls.Add(panel5);
+            panelTitulo.Controls.Add(label1);
+            panelTitulo.Controls.Add(btnMaximizar);
+            panelTitulo.Controls.Add(btnRestaurar);
+            panelTitulo.Controls.Add(btnCerrar);
+            panelTitulo.Dock = DockStyle.Top;
+            panelTitulo.Location = new Point(0, 0);
+            panelTitulo.Name = "panelTitulo";
+            panelTitulo.Size = new Size(391, 74);
+            panelTitulo.TabIndex = 3;
+            panelTitulo.MouseDown += panelTitulo_MouseDown;
             // 
             // button2
             // 
@@ -79,42 +81,33 @@
             button2.FlatAppearance.MouseOverBackColor = Color.FromArgb(223, 17, 3);
             button2.FlatStyle = FlatStyle.Flat;
             button2.Image = (Image)resources.GetObject("button2.Image");
-            button2.Location = new Point(893, 12);
+            button2.Location = new Point(334, 12);
             button2.Name = "button2";
             button2.Size = new Size(45, 45);
             button2.TabIndex = 17;
             button2.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            button1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            button1.FlatAppearance.BorderSize = 0;
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.Image = (Image)resources.GetObject("button1.Image");
-            button1.Location = new Point(842, 12);
-            button1.Name = "button1";
-            button1.Size = new Size(45, 45);
-            button1.TabIndex = 16;
-            button1.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
             // panel5
             // 
             panel5.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             panel5.Location = new Point(6, 74);
             panel5.Name = "panel5";
-            panel5.Size = new Size(1688, 446);
+            panel5.Size = new Size(1129, 446);
             panel5.TabIndex = 6;
             // 
             // label1
             // 
-            label1.AutoSize = true;
             label1.Font = new Font("Lato", 23.9999962F, FontStyle.Bold, GraphicsUnit.Point);
             label1.ForeColor = Color.Gainsboro;
+            label1.Image = (Image)resources.GetObject("label1.Image");
+            label1.ImageAlign = ContentAlignment.MiddleLeft;
             label1.Location = new Point(12, 12);
             label1.Name = "label1";
-            label1.Size = new Size(218, 39);
+            label1.Size = new Size(170, 40);
             label1.TabIndex = 15;
-            label1.Text = "Configuración";
+            label1.Text = "Servidor";
+            label1.TextAlign = ContentAlignment.MiddleRight;
             // 
             // btnMaximizar
             // 
@@ -122,7 +115,7 @@
             btnMaximizar.FlatAppearance.BorderSize = 0;
             btnMaximizar.FlatStyle = FlatStyle.Flat;
             btnMaximizar.Image = (Image)resources.GetObject("btnMaximizar.Image");
-            btnMaximizar.Location = new Point(1592, 12);
+            btnMaximizar.Location = new Point(1033, 12);
             btnMaximizar.Name = "btnMaximizar";
             btnMaximizar.Size = new Size(45, 45);
             btnMaximizar.TabIndex = 14;
@@ -134,7 +127,7 @@
             btnRestaurar.FlatAppearance.BorderSize = 0;
             btnRestaurar.FlatStyle = FlatStyle.Flat;
             btnRestaurar.Image = (Image)resources.GetObject("btnRestaurar.Image");
-            btnRestaurar.Location = new Point(1592, 12);
+            btnRestaurar.Location = new Point(1033, 12);
             btnRestaurar.Name = "btnRestaurar";
             btnRestaurar.Size = new Size(45, 45);
             btnRestaurar.TabIndex = 13;
@@ -148,7 +141,7 @@
             btnCerrar.FlatAppearance.MouseOverBackColor = Color.FromArgb(223, 17, 3);
             btnCerrar.FlatStyle = FlatStyle.Flat;
             btnCerrar.Image = (Image)resources.GetObject("btnCerrar.Image");
-            btnCerrar.Location = new Point(1643, 12);
+            btnCerrar.Location = new Point(1084, 12);
             btnCerrar.Name = "btnCerrar";
             btnCerrar.Size = new Size(45, 45);
             btnCerrar.TabIndex = 11;
@@ -160,51 +153,52 @@
             panel2.Dock = DockStyle.Left;
             panel2.Location = new Point(0, 74);
             panel2.Name = "panel2";
-            panel2.Size = new Size(6, 484);
+            panel2.Size = new Size(6, 351);
             panel2.TabIndex = 4;
             // 
             // panel3
             // 
             panel3.BackColor = Color.FromArgb(78, 78, 78);
             panel3.Dock = DockStyle.Right;
-            panel3.Location = new Point(944, 74);
+            panel3.Location = new Point(385, 74);
             panel3.Name = "panel3";
-            panel3.Size = new Size(6, 484);
+            panel3.Size = new Size(6, 351);
             panel3.TabIndex = 5;
             // 
             // panel4
             // 
             panel4.BackColor = Color.FromArgb(78, 78, 78);
             panel4.Dock = DockStyle.Bottom;
-            panel4.Location = new Point(6, 550);
+            panel4.Location = new Point(6, 417);
             panel4.Name = "panel4";
-            panel4.Size = new Size(938, 8);
+            panel4.Size = new Size(379, 8);
             panel4.TabIndex = 6;
             // 
-            // textBox1
+            // txtHost
             // 
-            textBox1.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox1.Location = new Point(256, 189);
-            textBox1.MaxLength = 200;
-            textBox1.Multiline = true;
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(220, 28);
-            textBox1.TabIndex = 7;
+            txtHost.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            txtHost.Location = new Point(119, 131);
+            txtHost.MaxLength = 200;
+            txtHost.Multiline = true;
+            txtHost.Name = "txtHost";
+            txtHost.Size = new Size(220, 28);
+            txtHost.TabIndex = 7;
+            txtHost.Text = "127.0.0.1";
             // 
-            // textBox2
+            // txtUsuario
             // 
-            textBox2.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox2.Location = new Point(256, 257);
-            textBox2.Multiline = true;
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(220, 28);
-            textBox2.TabIndex = 8;
+            txtUsuario.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            txtUsuario.Location = new Point(119, 199);
+            txtUsuario.Multiline = true;
+            txtUsuario.Name = "txtUsuario";
+            txtUsuario.Size = new Size(220, 28);
+            txtUsuario.TabIndex = 8;
             // 
             // label2
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(210, 189);
+            label2.Location = new Point(73, 131);
             label2.Name = "label2";
             label2.Size = new Size(40, 20);
             label2.TabIndex = 9;
@@ -214,48 +208,46 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            label3.Location = new Point(167, 291);
+            label3.Location = new Point(30, 233);
             label3.Name = "label3";
             label3.Size = new Size(83, 20);
             label3.TabIndex = 10;
             label3.Text = "Contraseña";
             // 
-            // textBox3
+            // txtContrasena
             // 
-            textBox3.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox3.Location = new Point(256, 291);
-            textBox3.Multiline = true;
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(220, 28);
-            textBox3.TabIndex = 11;
+            txtContrasena.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            txtContrasena.Location = new Point(119, 233);
+            txtContrasena.Multiline = true;
+            txtContrasena.Name = "txtContrasena";
+            txtContrasena.Size = new Size(220, 28);
+            txtContrasena.TabIndex = 11;
             // 
             // label4
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            label4.Location = new Point(191, 257);
+            label4.Location = new Point(54, 199);
             label4.Name = "label4";
             label4.Size = new Size(59, 20);
             label4.TabIndex = 12;
             label4.Text = "Usuario";
             // 
-            // comboBox1
+            // cmbServidor
             // 
-            comboBox1.DrawMode = DrawMode.OwnerDrawVariable;
-            comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
-            comboBox1.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Items.AddRange(new object[] { "MySQL", "SQL Server 2000" });
-            comboBox1.Location = new Point(256, 155);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(220, 28);
-            comboBox1.TabIndex = 13;
+            cmbServidor.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbServidor.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            cmbServidor.FormattingEnabled = true;
+            cmbServidor.Location = new Point(119, 97);
+            cmbServidor.Name = "cmbServidor";
+            cmbServidor.Size = new Size(220, 28);
+            cmbServidor.TabIndex = 13;
             // 
             // label5
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            label5.Location = new Point(186, 158);
+            label5.Location = new Point(49, 100);
             label5.Name = "label5";
             label5.Size = new Size(64, 20);
             label5.TabIndex = 14;
@@ -264,7 +256,7 @@
             // textBox4
             // 
             textBox4.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox4.Location = new Point(256, 325);
+            textBox4.Location = new Point(119, 267);
             textBox4.Multiline = true;
             textBox4.Name = "textBox4";
             textBox4.Size = new Size(220, 28);
@@ -274,67 +266,127 @@
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            label6.Location = new Point(184, 325);
+            label6.Location = new Point(47, 267);
             label6.Name = "label6";
             label6.Size = new Size(66, 20);
             label6.TabIndex = 16;
             label6.Text = "Consulta";
             // 
-            // textBox5
+            // txtPuerto
             // 
-            textBox5.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox5.Location = new Point(256, 223);
-            textBox5.MaxLength = 200;
-            textBox5.Multiline = true;
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(220, 28);
-            textBox5.TabIndex = 17;
+            txtPuerto.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            txtPuerto.Location = new Point(119, 165);
+            txtPuerto.MaxLength = 200;
+            txtPuerto.Multiline = true;
+            txtPuerto.Name = "txtPuerto";
+            txtPuerto.Size = new Size(220, 28);
+            txtPuerto.TabIndex = 17;
             // 
             // label7
             // 
             label7.AutoSize = true;
             label7.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            label7.Location = new Point(198, 226);
+            label7.Location = new Point(61, 168);
             label7.Name = "label7";
             label7.Size = new Size(52, 20);
             label7.TabIndex = 18;
             label7.Text = "Puerto";
+            // 
+            // btnGuardar
+            // 
+            btnGuardar.BackColor = Color.FromArgb(90, 90, 90);
+            btnGuardar.FlatAppearance.BorderColor = Color.FromArgb(51, 62, 80);
+            btnGuardar.FlatAppearance.MouseDownBackColor = Color.FromArgb(51, 62, 80);
+            btnGuardar.FlatAppearance.MouseOverBackColor = Color.FromArgb(110, 110, 110);
+            btnGuardar.FlatStyle = FlatStyle.Flat;
+            btnGuardar.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            btnGuardar.ForeColor = Color.Gainsboro;
+            btnGuardar.Image = (Image)resources.GetObject("btnGuardar.Image");
+            btnGuardar.ImageAlign = ContentAlignment.TopCenter;
+            btnGuardar.Location = new Point(20, 344);
+            btnGuardar.Name = "btnGuardar";
+            btnGuardar.Size = new Size(100, 50);
+            btnGuardar.TabIndex = 19;
+            btnGuardar.Text = "Guardar";
+            btnGuardar.TextAlign = ContentAlignment.BottomCenter;
+            btnGuardar.UseVisualStyleBackColor = false;
+            // 
+            // btnModificar
+            // 
+            btnModificar.BackColor = Color.FromArgb(90, 90, 90);
+            btnModificar.FlatAppearance.BorderColor = Color.FromArgb(51, 62, 80);
+            btnModificar.FlatAppearance.MouseDownBackColor = Color.FromArgb(51, 62, 80);
+            btnModificar.FlatAppearance.MouseOverBackColor = Color.FromArgb(110, 110, 110);
+            btnModificar.FlatStyle = FlatStyle.Flat;
+            btnModificar.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            btnModificar.ForeColor = Color.Gainsboro;
+            btnModificar.Image = (Image)resources.GetObject("btnModificar.Image");
+            btnModificar.ImageAlign = ContentAlignment.TopCenter;
+            btnModificar.Location = new Point(139, 344);
+            btnModificar.Name = "btnModificar";
+            btnModificar.Size = new Size(100, 50);
+            btnModificar.TabIndex = 20;
+            btnModificar.Text = "Modificar";
+            btnModificar.TextAlign = ContentAlignment.BottomCenter;
+            btnModificar.UseVisualStyleBackColor = false;
+            // 
+            // btnCancelar
+            // 
+            btnCancelar.BackColor = Color.FromArgb(90, 90, 90);
+            btnCancelar.FlatAppearance.BorderColor = Color.FromArgb(51, 62, 80);
+            btnCancelar.FlatAppearance.MouseDownBackColor = Color.FromArgb(51, 62, 80);
+            btnCancelar.FlatAppearance.MouseOverBackColor = Color.FromArgb(110, 110, 110);
+            btnCancelar.FlatStyle = FlatStyle.Flat;
+            btnCancelar.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            btnCancelar.ForeColor = Color.Gainsboro;
+            btnCancelar.Image = (Image)resources.GetObject("btnCancelar.Image");
+            btnCancelar.ImageAlign = ContentAlignment.TopCenter;
+            btnCancelar.Location = new Point(255, 344);
+            btnCancelar.Name = "btnCancelar";
+            btnCancelar.Size = new Size(100, 50);
+            btnCancelar.TabIndex = 21;
+            btnCancelar.Text = "Cancelar";
+            btnCancelar.TextAlign = ContentAlignment.BottomCenter;
+            btnCancelar.UseVisualStyleBackColor = false;
             // 
             // frmConfiguracion
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ControlDark;
-            ClientSize = new Size(950, 558);
+            ClientSize = new Size(391, 425);
+            Controls.Add(btnCancelar);
+            Controls.Add(btnModificar);
+            Controls.Add(btnGuardar);
             Controls.Add(label7);
-            Controls.Add(textBox5);
+            Controls.Add(txtPuerto);
             Controls.Add(label6);
             Controls.Add(textBox4);
             Controls.Add(label5);
-            Controls.Add(comboBox1);
+            Controls.Add(cmbServidor);
             Controls.Add(label4);
-            Controls.Add(textBox3);
+            Controls.Add(txtContrasena);
             Controls.Add(label3);
             Controls.Add(label2);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
+            Controls.Add(txtUsuario);
+            Controls.Add(txtHost);
             Controls.Add(panel4);
             Controls.Add(panel3);
             Controls.Add(panel2);
-            Controls.Add(panel1);
+            Controls.Add(panelTitulo);
             FormBorderStyle = FormBorderStyle.None;
             Name = "frmConfiguracion";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "frmConfiguracion";
-            panel1.ResumeLayout(false);
-            panel1.PerformLayout();
+            Load += frmConfiguracion_Load;
+            panelTitulo.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private Panel panel1;
+        private Panel panelTitulo;
         private Panel panel5;
         private Label label1;
         private Button btnMaximizar;
@@ -343,19 +395,21 @@
         private Panel panel2;
         private Panel panel3;
         private Panel panel4;
-        private Button button1;
         private Button button2;
-        private TextBox textBox1;
-        private TextBox textBox2;
+        private TextBox txtHost;
+        private TextBox txtUsuario;
         private Label label2;
         private Label label3;
-        private TextBox textBox3;
+        private TextBox txtContrasena;
         private Label label4;
-        private ComboBox comboBox1;
+        private ComboBox cmbServidor;
         private Label label5;
         private TextBox textBox4;
         private Label label6;
-        private TextBox textBox5;
+        private TextBox txtPuerto;
         private Label label7;
+        private Button btnGuardar;
+        private Button btnModificar;
+        private Button btnCancelar;
     }
 }
