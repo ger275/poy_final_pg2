@@ -8,6 +8,7 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using SistemaParaPrediccionDeVentas.Controlador;
 
 namespace SistemaParaPrediccionDeVentas.Vista
 {
@@ -47,6 +48,21 @@ namespace SistemaParaPrediccionDeVentas.Vista
             txtUsuario.Enabled = false;
             txtContrasena.Enabled = false;
             btnGuardar.Enabled = false;
+        }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            MsgBoxController msgBoxSiNo = new MsgBoxController();
+            
+            if (msgBoxSiNo.SiNo("Atención", "¿Desea modificar la configuración del servidor?"))
+            {
+                MessageBox.Show("presiono si");
+            }
+            else
+            {
+                MessageBox.Show("Presiono no");
+            }
+
         }
     }
 }

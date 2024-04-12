@@ -329,6 +329,7 @@
             btnModificar.Text = "Modificar";
             btnModificar.TextAlign = ContentAlignment.BottomCenter;
             btnModificar.UseVisualStyleBackColor = false;
+            btnModificar.Click += btnModificar_Click;
             // 
             // btnCancelar
             // 

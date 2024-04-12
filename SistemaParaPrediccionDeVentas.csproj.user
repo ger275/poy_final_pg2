@@ -25,6 +25,9 @@
     <Compile Update="Vista\frmReportPrediccionActual.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Vista\MSGBOX\msgBoxSiNo.cs">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Update="DataSetComparativo.xsd">

@@ -97,3 +97,4 @@ C:\Users\Windows 10\Tareas\2023\segundo semestre\pg_2\CODIGO\SistemaParaPredicci
 C:\Users\Windows 10\Tareas\2023\segundo semestre\pg_2\CODIGO\SistemaParaPrediccionDeVentas\obj\Debug\net6.0-windows\SistemaParaPrediccionDeVentas.pdb
 C:\Users\Windows 10\Tareas\2023\segundo semestre\pg_2\CODIGO\SistemaParaPrediccionDeVentas\obj\Debug\net6.0-windows\SistemaParaPrediccionDeVentas.genruntimeconfig.cache
 C:\Users\Windows 10\Tareas\2023\segundo semestre\pg_2\CODIGO\SistemaParaPrediccionDeVentas\obj\Debug\net6.0-windows\ref\SistemaParaPrediccionDeVentas.dll
+C:\Users\Windows 10\Tareas\2023\segundo semestre\pg_2\CODIGO\SistemaParaPrediccionDeVentas\obj\Debug\net6.0-windows\SistemaParaPrediccionDeVentas.Vista.MSGBOX.msgBoxSiNo.resources
