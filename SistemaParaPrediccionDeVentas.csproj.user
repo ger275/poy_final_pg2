@@ -25,6 +25,12 @@
     <Compile Update="Vista\frmReportPrediccionActual.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Vista\MSGBOX\msgBoxInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Vista\MSGBOX\msgBoxPedirContrasena.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Vista\MSGBOX\msgBoxSiNo.cs">
       <SubType>Form</SubType>
     </Compile>

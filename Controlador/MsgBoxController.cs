@@ -17,8 +17,8 @@ namespace SistemaParaPrediccionDeVentas.Controlador
         public bool SiNo(string titulo, string mensaje)
         {
             msgBoxSiNo msgFrm = new msgBoxSiNo();
-            msgFrm.lblTitulo.Text = titulo;
             msgFrm.lblMensaje.Text = mensaje;
+            msgFrm.Text = titulo;
 
             DialogResult dg = msgFrm.ShowDialog();
 
@@ -29,6 +29,34 @@ namespace SistemaParaPrediccionDeVentas.Controlador
             {
                 return false;
             }
+        }
+
+        public string PedirContrasena(string titulo, string mensaje)
+        {
+            msgBoxPedirContrasena msgFrm = new msgBoxPedirContrasena();
+            msgFrm.lblMensaje.Text = mensaje;
+            msgFrm.Text = titulo;
+
+            DialogResult dg = msgFrm.ShowDialog();
+
+            if (dg == DialogResult.OK)
+            {
+                return msgFrm.txtContrasena.Text;
+            }
+            else
+            {
+                return "CancelarMsgBoxFrm";
+            }
+
+        }
+
+        public void Info(string titulo, string mensaje)
+        {
+            msgBoxInfo msgFrm = new msgBoxInfo();
+            msgFrm.lblMensaje.Text = mensaje;
+            msgFrm.Text = titulo;
+
+            DialogResult dg = msgFrm.ShowDialog();
         }
     }
 }

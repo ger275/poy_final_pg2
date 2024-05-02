@@ -59,7 +59,7 @@
             // 
             // panelTitulo
             // 
-            panelTitulo.BackColor = Color.FromArgb(78, 78, 78);
+            panelTitulo.BackColor = Color.FromArgb(74, 87, 108);
             panelTitulo.Controls.Add(button2);
             panelTitulo.Controls.Add(panel5);
             panelTitulo.Controls.Add(label1);
@@ -149,7 +149,7 @@
             // 
             // panel2
             // 
-            panel2.BackColor = Color.FromArgb(78, 78, 78);
+            panel2.BackColor = Color.FromArgb(74, 87, 108);
             panel2.Dock = DockStyle.Left;
             panel2.Location = new Point(0, 74);
             panel2.Name = "panel2";
@@ -158,7 +158,7 @@
             // 
             // panel3
             // 
-            panel3.BackColor = Color.FromArgb(78, 78, 78);
+            panel3.BackColor = Color.FromArgb(74, 87, 108);
             panel3.Dock = DockStyle.Right;
             panel3.Location = new Point(385, 74);
             panel3.Name = "panel3";
@@ -167,7 +167,7 @@
             // 
             // panel4
             // 
-            panel4.BackColor = Color.FromArgb(78, 78, 78);
+            panel4.BackColor = Color.FromArgb(74, 87, 108);
             panel4.Dock = DockStyle.Bottom;
             panel4.Location = new Point(6, 417);
             panel4.Name = "panel4";
@@ -294,10 +294,10 @@
             // 
             // btnGuardar
             // 
-            btnGuardar.BackColor = Color.FromArgb(90, 90, 90);
-            btnGuardar.FlatAppearance.BorderColor = Color.FromArgb(51, 62, 80);
-            btnGuardar.FlatAppearance.MouseDownBackColor = Color.FromArgb(51, 62, 80);
-            btnGuardar.FlatAppearance.MouseOverBackColor = Color.FromArgb(110, 110, 110);
+            btnGuardar.BackColor = Color.FromArgb(74, 87, 108);
+            btnGuardar.FlatAppearance.BorderColor = Color.FromArgb(17, 31, 52);
+            btnGuardar.FlatAppearance.MouseDownBackColor = Color.FromArgb(17, 31, 52);
+            btnGuardar.FlatAppearance.MouseOverBackColor = Color.FromArgb(51, 62, 80);
             btnGuardar.FlatStyle = FlatStyle.Flat;
             btnGuardar.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             btnGuardar.ForeColor = Color.Gainsboro;
@@ -310,16 +310,17 @@
             btnGuardar.Text = "Guardar";
             btnGuardar.TextAlign = ContentAlignment.BottomCenter;
             btnGuardar.UseVisualStyleBackColor = false;
+            btnGuardar.Click += btnGuardar_Click;
             // 
             // btnModificar
             // 
-            btnModificar.BackColor = Color.FromArgb(90, 90, 90);
-            btnModificar.FlatAppearance.BorderColor = Color.FromArgb(51, 62, 80);
-            btnModificar.FlatAppearance.MouseDownBackColor = Color.FromArgb(51, 62, 80);
-            btnModificar.FlatAppearance.MouseOverBackColor = Color.FromArgb(110, 110, 110);
+            btnModificar.BackColor = Color.FromArgb(74, 87, 108);
+            btnModificar.FlatAppearance.BorderColor = Color.FromArgb(17, 31, 52);
+            btnModificar.FlatAppearance.MouseDownBackColor = Color.FromArgb(17, 31, 52);
+            btnModificar.FlatAppearance.MouseOverBackColor = Color.FromArgb(51, 62, 80);
             btnModificar.FlatStyle = FlatStyle.Flat;
             btnModificar.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
-            btnModificar.ForeColor = Color.Gainsboro;
+            btnModificar.ForeColor = Color.White;
             btnModificar.Image = (Image)resources.GetObject("btnModificar.Image");
             btnModificar.ImageAlign = ContentAlignment.TopCenter;
             btnModificar.Location = new Point(139, 344);
@@ -333,13 +334,13 @@
             // 
             // btnCancelar
             // 
-            btnCancelar.BackColor = Color.FromArgb(90, 90, 90);
-            btnCancelar.FlatAppearance.BorderColor = Color.FromArgb(51, 62, 80);
-            btnCancelar.FlatAppearance.MouseDownBackColor = Color.FromArgb(51, 62, 80);
-            btnCancelar.FlatAppearance.MouseOverBackColor = Color.FromArgb(110, 110, 110);
+            btnCancelar.BackColor = Color.FromArgb(74, 87, 108);
+            btnCancelar.FlatAppearance.BorderColor = Color.FromArgb(17, 31, 52);
+            btnCancelar.FlatAppearance.MouseDownBackColor = Color.FromArgb(17, 31, 52);
+            btnCancelar.FlatAppearance.MouseOverBackColor = Color.FromArgb(51, 62, 80);
             btnCancelar.FlatStyle = FlatStyle.Flat;
             btnCancelar.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
-            btnCancelar.ForeColor = Color.Gainsboro;
+            btnCancelar.ForeColor = Color.White;
             btnCancelar.Image = (Image)resources.GetObject("btnCancelar.Image");
             btnCancelar.ImageAlign = ContentAlignment.TopCenter;
             btnCancelar.Location = new Point(255, 344);
@@ -354,7 +355,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = SystemColors.ControlDark;
+            BackColor = Color.FromArgb(104, 116, 135);
             ClientSize = new Size(391, 425);
             Controls.Add(btnCancelar);
             Controls.Add(btnModificar);

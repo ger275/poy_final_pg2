@@ -26,5 +26,10 @@ namespace SistemaParaPrediccionDeVentas.Vista.MSGBOX
         {
             DialogResult = DialogResult.No;
         }
+
+        private void msgBoxSiNo_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

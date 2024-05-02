@@ -52,17 +52,43 @@ namespace SistemaParaPrediccionDeVentas.Vista
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
-            MsgBoxController msgBoxSiNo = new MsgBoxController();
-            
-            if (msgBoxSiNo.SiNo("Atención", "¿Desea modificar la configuración del servidor?"))
-            {
-                MessageBox.Show("presiono si");
-            }
-            else
-            {
-                MessageBox.Show("Presiono no");
-            }
+            MsgBoxController msgBox = new MsgBoxController();
+            String contrasena = "";
 
+            if (msgBox.SiNo("Atención", "¿Desea modificar la configuración del servidor?"))
+            {
+                contrasena = msgBox.PedirContrasena("Atención", "Para modificar la configuración ingrese su contraseña.");
+
+                if (contrasena.Equals("CancelarMsgBoxFrm"))
+                {
+
+                }
+                else
+                {
+                    MessageBox.Show("Valirdar contraseña");
+                    cmbServidor.Enabled = true;
+                    txtHost.Enabled = true;
+                    txtPuerto.Enabled = true;
+                    txtUsuario.Enabled = true;
+                    txtContrasena.Enabled = true;
+                    btnGuardar.Enabled = true;
+                    btnModificar.Enabled = false;
+                }
+            }
+        }
+
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
+            cmbServidor.Enabled = false;
+            txtHost.Enabled = false;
+            txtPuerto.Enabled = false;
+            txtUsuario.Enabled = false;
+            txtContrasena.Enabled = false;
+            btnGuardar.Enabled = false;
+            btnModificar.Enabled = true;
+
+            MsgBoxController msgBox = new MsgBoxController();
+            msgBox.Info("Atención", "Se guardaron los datos.");
         }
     }
 }

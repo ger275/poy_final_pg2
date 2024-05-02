@@ -226,7 +226,7 @@
             // pFormulariosHijos
             // 
             pFormulariosHijos.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            pFormulariosHijos.BackColor = SystemColors.ActiveBorder;
+            pFormulariosHijos.BackColor = Color.White;
             pFormulariosHijos.Controls.Add(pictureBox1);
             pFormulariosHijos.Controls.Add(label1);
             pFormulariosHijos.Controls.Add(pReportes);
