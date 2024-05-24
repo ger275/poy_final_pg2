@@ -195,7 +195,7 @@ namespace SistemaParaPrediccionDeVentas.Controlador
                     separador = ",";
                 }
                 else if ((lineaArray = linea.Split(";")).Length == 2)
-                {
+                { 
                     separador = ";";
                 }
 

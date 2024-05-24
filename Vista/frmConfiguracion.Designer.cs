@@ -220,6 +220,7 @@
             txtContrasena.Location = new Point(119, 233);
             txtContrasena.Multiline = true;
             txtContrasena.Name = "txtContrasena";
+            txtContrasena.PasswordChar = '*';
             txtContrasena.Size = new Size(220, 28);
             txtContrasena.TabIndex = 11;
             // 
@@ -350,6 +351,7 @@
             btnCancelar.Text = "Cancelar";
             btnCancelar.TextAlign = ContentAlignment.BottomCenter;
             btnCancelar.UseVisualStyleBackColor = false;
+            btnCancelar.Click += btnCancelar_Click;
             // 
             // frmConfiguracion
             // 

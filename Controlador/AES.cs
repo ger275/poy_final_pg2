@@ -16,6 +16,36 @@ namespace SistemaParaPrediccionDeVentas.Controlador
 
         }
 
+        public string EncriptarDato(string datoDesencriptado)
+        {
+            string datoEncriptado = "";
+
+            using (Aes encript = Aes.Create())
+            {
+                byte[] llave = new byte[16] { 0x0, 0x0, 0x4C, 0x5A, 0x12, 0x17, 0x6, 0x0, 0x15, 0x1F, 0xE, 0x5, 0x14, 0x18, 0x0, 0x0 };
+                byte[] i_v = new byte[16];
+
+                datoEncriptado = Encriptar(datoDesencriptado, llave, i_v);
+            }
+
+            return datoEncriptado;
+        }
+
+        public string DesEncriptarDato(string datoEncriptado)
+        {
+            string datoDesEncriptado = "";
+
+            using (Aes encript = Aes.Create())
+            {
+                byte[] llave = new byte[16] { 0x0, 0x0, 0x4C, 0x5A, 0x12, 0x17, 0x6, 0x0, 0x15, 0x1F, 0xE, 0x5, 0x14, 0x18, 0x0, 0x0 };
+                byte[] i_v = new byte[16];
+
+                datoDesEncriptado = DesEncriptar(datoEncriptado, llave, i_v);
+            }
+
+            return datoDesEncriptado;
+        }
+
         public string Encriptar(string dato, byte[] llave, byte[] iv)
         {
             string encriptado = "";
