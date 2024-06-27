@@ -29,19 +29,10 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(msgBoxInfo));
-            lblMensaje = new Label();
             label1 = new Label();
             btnOk = new Button();
+            lblMensaje = new TextBox();
             SuspendLayout();
-            // 
-            // lblMensaje
-            // 
-            lblMensaje.CausesValidation = false;
-            lblMensaje.Location = new Point(68, 9);
-            lblMensaje.Name = "lblMensaje";
-            lblMensaje.Size = new Size(226, 72);
-            lblMensaje.TabIndex = 11;
-            lblMensaje.Text = "Mensaje";
             // 
             // label1
             // 
@@ -68,6 +59,16 @@
             btnOk.UseVisualStyleBackColor = false;
             btnOk.Click += btnOk_Click;
             // 
+            // lblMensaje
+            // 
+            lblMensaje.Location = new Point(68, 9);
+            lblMensaje.Multiline = true;
+            lblMensaje.Name = "lblMensaje";
+            lblMensaje.ScrollBars = ScrollBars.Vertical;
+            lblMensaje.Size = new Size(226, 72);
+            lblMensaje.TabIndex = 14;
+            lblMensaje.Text = "Mensaje";
+            // 
             // msgBoxInfo
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -75,20 +76,20 @@
             BackColor = Color.White;
             ClientSize = new Size(306, 151);
             ControlBox = false;
+            Controls.Add(lblMensaje);
             Controls.Add(btnOk);
             Controls.Add(label1);
-            Controls.Add(lblMensaje);
             FormBorderStyle = FormBorderStyle.FixedToolWindow;
             Name = "msgBoxInfo";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "msgBoxInfo";
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
-
-        public Label lblMensaje;
         private Label label1;
         private Button btnOk;
+        public TextBox lblMensaje;
     }
 }

@@ -42,6 +42,9 @@
             panel3 = new Panel();
             panel4 = new Panel();
             pFormulariosHijos = new Panel();
+            pConfiguracion = new Panel();
+            btnEntrenarModelo = new Button();
+            btnConfigServidor = new Button();
             pictureBox1 = new PictureBox();
             label1 = new Label();
             pReportes = new Panel();
@@ -50,6 +53,7 @@
             btnPrediccionActual = new Button();
             pMenu.SuspendLayout();
             pFormulariosHijos.SuspendLayout();
+            pConfiguracion.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             pReportes.SuspendLayout();
             SuspendLayout();
@@ -75,6 +79,7 @@
             // btnConfiguracion
             // 
             btnConfiguracion.FlatAppearance.BorderSize = 0;
+            btnConfiguracion.FlatAppearance.MouseDownBackColor = Color.FromArgb(74, 87, 108);
             btnConfiguracion.FlatAppearance.MouseOverBackColor = Color.Transparent;
             btnConfiguracion.FlatStyle = FlatStyle.Flat;
             btnConfiguracion.Font = new Font("Lato", 15.7499981F, FontStyle.Bold, GraphicsUnit.Point);
@@ -131,6 +136,7 @@
             // btnGraficas
             // 
             btnGraficas.FlatAppearance.BorderSize = 0;
+            btnGraficas.FlatAppearance.MouseDownBackColor = Color.FromArgb(74, 87, 108);
             btnGraficas.FlatAppearance.MouseOverBackColor = Color.Transparent;
             btnGraficas.FlatStyle = FlatStyle.Flat;
             btnGraficas.Font = new Font("Lato", 15.7499981F, FontStyle.Bold, GraphicsUnit.Point);
@@ -148,6 +154,7 @@
             // btnReportes
             // 
             btnReportes.FlatAppearance.BorderSize = 0;
+            btnReportes.FlatAppearance.MouseDownBackColor = Color.FromArgb(74, 87, 108);
             btnReportes.FlatAppearance.MouseOverBackColor = Color.Transparent;
             btnReportes.FlatStyle = FlatStyle.Flat;
             btnReportes.Font = new Font("Lato", 15.7499981F, FontStyle.Bold, GraphicsUnit.Point);
@@ -167,6 +174,7 @@
             // btnPredecir
             // 
             btnPredecir.FlatAppearance.BorderSize = 0;
+            btnPredecir.FlatAppearance.MouseDownBackColor = Color.FromArgb(74, 87, 108);
             btnPredecir.FlatAppearance.MouseOverBackColor = Color.Transparent;
             btnPredecir.FlatStyle = FlatStyle.Flat;
             btnPredecir.Font = new Font("Lato", 15.7499981F, FontStyle.Bold, GraphicsUnit.Point);
@@ -227,6 +235,7 @@
             // 
             pFormulariosHijos.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             pFormulariosHijos.BackColor = Color.White;
+            pFormulariosHijos.Controls.Add(pConfiguracion);
             pFormulariosHijos.Controls.Add(pictureBox1);
             pFormulariosHijos.Controls.Add(label1);
             pFormulariosHijos.Controls.Add(pReportes);
@@ -234,6 +243,47 @@
             pFormulariosHijos.Name = "pFormulariosHijos";
             pFormulariosHijos.Size = new Size(1109, 605);
             pFormulariosHijos.TabIndex = 5;
+            // 
+            // pConfiguracion
+            // 
+            pConfiguracion.BackColor = Color.FromArgb(74, 87, 108);
+            pConfiguracion.Controls.Add(btnEntrenarModelo);
+            pConfiguracion.Controls.Add(btnConfigServidor);
+            pConfiguracion.Location = new Point(498, 0);
+            pConfiguracion.Name = "pConfiguracion";
+            pConfiguracion.Size = new Size(200, 173);
+            pConfiguracion.TabIndex = 8;
+            pConfiguracion.Visible = false;
+            // 
+            // btnEntrenarModelo
+            // 
+            btnEntrenarModelo.FlatAppearance.BorderSize = 0;
+            btnEntrenarModelo.FlatAppearance.MouseOverBackColor = Color.DeepSkyBlue;
+            btnEntrenarModelo.FlatStyle = FlatStyle.Flat;
+            btnEntrenarModelo.Font = new Font("Lato", 15.7499981F, FontStyle.Bold, GraphicsUnit.Point);
+            btnEntrenarModelo.ForeColor = Color.White;
+            btnEntrenarModelo.Location = new Point(0, 46);
+            btnEntrenarModelo.Name = "btnEntrenarModelo";
+            btnEntrenarModelo.Size = new Size(200, 40);
+            btnEntrenarModelo.TabIndex = 10;
+            btnEntrenarModelo.Text = "Entrenar modelo";
+            btnEntrenarModelo.UseVisualStyleBackColor = true;
+            btnEntrenarModelo.Click += btnEntrenarModelo_Click;
+            // 
+            // btnConfigServidor
+            // 
+            btnConfigServidor.FlatAppearance.BorderSize = 0;
+            btnConfigServidor.FlatAppearance.MouseOverBackColor = Color.DeepSkyBlue;
+            btnConfigServidor.FlatStyle = FlatStyle.Flat;
+            btnConfigServidor.Font = new Font("Lato", 15.7499981F, FontStyle.Bold, GraphicsUnit.Point);
+            btnConfigServidor.ForeColor = Color.White;
+            btnConfigServidor.Location = new Point(0, 0);
+            btnConfigServidor.Name = "btnConfigServidor";
+            btnConfigServidor.Size = new Size(200, 40);
+            btnConfigServidor.TabIndex = 9;
+            btnConfigServidor.Text = "Servidor";
+            btnConfigServidor.UseVisualStyleBackColor = true;
+            btnConfigServidor.Click += btnConfigServidor_Click;
             // 
             // pictureBox1
             // 
@@ -329,6 +379,7 @@
             pMenu.ResumeLayout(false);
             pFormulariosHijos.ResumeLayout(false);
             pFormulariosHijos.PerformLayout();
+            pConfiguracion.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             pReportes.ResumeLayout(false);
             ResumeLayout(false);
@@ -355,5 +406,8 @@
         private Label label1;
         private PictureBox pictureBox1;
         private Button btnConfiguracion;
+        private Panel pConfiguracion;
+        private Button btnEntrenarModelo;
+        private Button btnConfigServidor;
     }
 }

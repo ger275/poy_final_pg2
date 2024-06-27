@@ -46,11 +46,15 @@
           "dependencies": {
             "Microsoft.ML": {
               "target": "Package",
-              "version": "[3.0.0-preview.23266.6, )"
+              "version": "[3.0.1, )"
             },
             "Microsoft.ML.FastTree": {
               "target": "Package",
-              "version": "[3.0.0-preview.23266.6, )"
+              "version": "[3.0.1, )"
+            },
+            "MySql.Data": {
+              "target": "Package",
+              "version": "[8.4.0, )"
             },
             "Plotly.NET": {
               "target": "Package",

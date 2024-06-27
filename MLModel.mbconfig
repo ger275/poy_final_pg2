@@ -1,8 +1,13 @@
 ﻿{
   "Scenario": "Regression",
   "DataSource": {
+    "Version": 3,
+    "EscapeCharacter": "\"",
+    "ReadMultiLines": false,
+    "KeepDiacritics": false,
+    "KeepPunctuations": false,
+    "AllowQuoting": true,
     "Type": "TabularFile",
-    "Version": 1,
     "FilePath": "C:\\Users\\Windows 10\\Tareas\\2023\\segundo semestre\\pg_2\\DATOS\\CSV\\S10_1678.csv",
     "Delimiter": ";",
     "DecimalMarker": ".",
@@ -11,10 +16,18 @@
       {
         "ColumnName": "fecha",
         "ColumnPurpose": "Feature",
-        "ColumnDataFormat": "Single",
+        "ColumnDataFormat": "DateTime",
         "IsCategorical": false,
         "Type": "Column",
-        "Version": 4
+        "Version": 5
+      },
+      {
+        "ColumnName": "producto",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "String",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 5
       },
       {
         "ColumnName": "cantidad",
@@ -22,7 +35,7 @@
         "ColumnDataFormat": "Single",
         "IsCategorical": false,
         "Type": "Column",
-        "Version": 4
+        "Version": 5
       }
     ]
   },
@@ -38,25 +51,31 @@
         "Version": 1,
         "Type": "Trial",
         "TrainerName": "FastForestRegression",
-        "Score": -0.15335542630248916,
-        "RuntimeInSeconds": 1.032,
+        "Score": -0.081298609735545341,
+        "RuntimeInSeconds": 1.865,
         "Parameter": {
-          "_SCHEMA_": "e0 * e1 * e3",
+          "_SCHEMA_": "e0 * e1 * e2 * e4",
           "e0": {
+            "InputColumnName": "producto",
+            "OutputColumnName": "producto"
+          },
+          "e1": {
             "OutputColumnNames": [
               "fecha"
             ],
             "InputColumnNames": [
               "fecha"
-            ]
+            ],
+            "TargetType": "Single"
           },
-          "e1": {
+          "e2": {
             "InputColumnNames": [
+              "producto",
               "fecha"
             ],
             "OutputColumnName": "Features"
           },
-          "e3": {
+          "e4": {
             "NumberOfTrees": 4,
             "NumberOfLeaves": 4,
             "FeatureFraction": 1.0,
@@ -64,22 +83,108 @@
             "FeatureColumnName": "Features"
           }
         }
+      },
+      {
+        "Version": 1,
+        "Type": "Trial",
+        "TrainerName": "LightGbmRegression",
+        "Score": -0.30486201849548344,
+        "RuntimeInSeconds": 0.883,
+        "Parameter": {
+          "_SCHEMA_": "e0 * e1 * e2 * e5",
+          "e0": {
+            "InputColumnName": "producto",
+            "OutputColumnName": "producto"
+          },
+          "e1": {
+            "OutputColumnNames": [
+              "fecha"
+            ],
+            "InputColumnNames": [
+              "fecha"
+            ],
+            "TargetType": "Single"
+          },
+          "e2": {
+            "InputColumnNames": [
+              "producto",
+              "fecha"
+            ],
+            "OutputColumnName": "Features"
+          },
+          "e5": {
+            "NumberOfLeaves": 4,
+            "MinimumExampleCountPerLeaf": 20,
+            "LearningRate": 1.0,
+            "NumberOfTrees": 4,
+            "SubsampleFraction": 1.0,
+            "MaximumBinCountPerFeature": 254,
+            "FeatureFraction": 1.0,
+            "L1Regularization": 2E-10,
+            "L2Regularization": 1.0,
+            "LabelColumnName": "cantidad",
+            "FeatureColumnName": "Features"
+          }
+        }
+      },
+      {
+        "Version": 1,
+        "Type": "Trial",
+        "TrainerName": "FastTreeRegression",
+        "Score": -4.4177030800033288,
+        "RuntimeInSeconds": 0.783,
+        "Parameter": {
+          "_SCHEMA_": "e0 * e1 * e2 * e3",
+          "e0": {
+            "InputColumnName": "producto",
+            "OutputColumnName": "producto"
+          },
+          "e1": {
+            "OutputColumnNames": [
+              "fecha"
+            ],
+            "InputColumnNames": [
+              "fecha"
+            ],
+            "TargetType": "Single"
+          },
+          "e2": {
+            "InputColumnNames": [
+              "producto",
+              "fecha"
+            ],
+            "OutputColumnName": "Features"
+          },
+          "e3": {
+            "NumberOfLeaves": 4,
+            "MinimumExampleCountPerLeaf": 20,
+            "NumberOfTrees": 4,
+            "MaximumBinCountPerFeature": 254,
+            "FeatureFraction": 1.0,
+            "LearningRate": 0.099999999999999978,
+            "LabelColumnName": "cantidad",
+            "FeatureColumnName": "Features",
+            "DiskTranspose": false
+          }
+        }
       }
     ],
     "Estimators": {
-      "e0": "ReplaceMissingValues",
-      "e1": "Concatenate",
-      "e2": "FastTreeRegression",
-      "e3": "FastForestRegression",
-      "e4": "LbfgsPoissonRegressionRegression",
-      "e5": "SdcaRegression"
+      "e0": "FeaturizeText",
+      "e1": "ConvertType",
+      "e2": "Concatenate",
+      "e3": "FastTreeRegression",
+      "e4": "FastForestRegression",
+      "e5": "LightGbmRegression",
+      "e6": "LbfgsPoissonRegressionRegression",
+      "e7": "SdcaRegression"
     },
-    "Schema": "e0 * e1 * (e2 + e3 + e4 + e5)",
+    "Schema": "e0 * e1 * e2 * (e3 + e4 + e5 + e6 + e7)",
     "MetricName": "RSquared",
     "ModelFilePath": "C:\\Users\\Windows 10\\Tareas\\2023\\segundo semestre\\pg_2\\CODIGO\\SistemaParaPrediccionDeVentas\\MLModel.mlnet"
   },
   "Type": "TrainingConfig",
-  "Version": 4,
+  "Version": 5,
   "TrainingOption": {
     "Version": 2,
     "Subsampling": false,

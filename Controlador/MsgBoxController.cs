@@ -58,5 +58,14 @@ namespace SistemaParaPrediccionDeVentas.Controlador
 
             DialogResult dg = msgFrm.ShowDialog();
         }
+
+        public void Errorr(string titulo, string mensaje)
+        {
+            msgBoxError msgFrm = new msgBoxError();
+            msgFrm.txtMensaje.Text = mensaje;
+            msgFrm.Text = titulo;
+
+            DialogResult dg = msgFrm.ShowDialog();
+        }
     }
 }

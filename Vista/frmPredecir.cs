@@ -148,16 +148,16 @@ namespace SistemaParaPrediccionDeVentas.Vista
                 fecha = fecha.AddMonths(1);
                 float mes = fecha.Month;
 
-                var predecirMes = new MLModel.ModelInput()
-                {
-                    Fecha = mes,
-                };
+                //var predecirMes = new MLModel.ModelInput()
+                //{
+                    //Fecha = mes,
+                //};
 
-                var resultado = MLModel.Predict(predecirMes);
+                //var resultado = MLModel.Predict(predecirMes);
 
-                archivos.GuardarPrediccion(codigoProducto, resultado.Score);
+                //archivos.GuardarPrediccion(codigoProducto, resultado.Score);
 
-                archivos.GuardarReporteComparativo(pathRaiz, mes, resultado.Score, codigoProducto);
+                //archivos.GuardarReporteComparativo(pathRaiz, mes, resultado.Score, codigoProducto);
 
                 File.Delete(pathRaiz);
 

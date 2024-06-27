@@ -17,9 +17,13 @@ namespace SistemaParaPrediccionDeVentas
         {
             [LoadColumn(0)]
             [ColumnName(@"fecha")]
-            public float Fecha { get; set; }
+            public DateTime Fecha { get; set; }
 
             [LoadColumn(1)]
+            [ColumnName(@"producto")]
+            public string Producto { get; set; }
+
+            [LoadColumn(2)]
             [ColumnName(@"cantidad")]
             public float Cantidad { get; set; }
 
@@ -35,6 +39,9 @@ namespace SistemaParaPrediccionDeVentas
         {
             [ColumnName(@"fecha")]
             public float Fecha { get; set; }
+
+            [ColumnName(@"producto")]
+            public float[] Producto { get; set; }
 
             [ColumnName(@"cantidad")]
             public float Cantidad { get; set; }

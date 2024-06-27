@@ -9,11 +9,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using SistemaParaPrediccionDeVentas.Controlador;
+using SistemaParaPrediccionDeVentas.Vista.MSGBOX;
 
 namespace SistemaParaPrediccionDeVentas.Vista
 {
     public partial class frmConfiguracion : Form
     {
+        public int indice = 0;
         public frmConfiguracion()
         {
             InitializeComponent();
@@ -53,7 +55,11 @@ namespace SistemaParaPrediccionDeVentas.Vista
             txtPuerto.Enabled = false;
             txtUsuario.Enabled = false;
             txtContrasena.Enabled = false;
+            txtBaseDeDatos.Enabled = false;
+            txtConsultaProductos.Enabled = false;
+            txtConsultaVentas.Enabled = false;
             btnGuardar.Enabled = false;
+            btnProbarConexion.Enabled = true;
 
             //se carga la configuración guardada
             if (datos.Count > 0)
@@ -61,7 +67,8 @@ namespace SistemaParaPrediccionDeVentas.Vista
                 if (datos[0].Split(" ::: ").Length == 2)
                 {
                     queDato = datos[0].Split(" ::: ")[1];
-                } else
+                }
+                else
                 {
                     queDato = "-1";
                 }
@@ -92,6 +99,18 @@ namespace SistemaParaPrediccionDeVentas.Vista
                         {
                             txtContrasena.Text = aes.DesEncriptarDato(dato.Split(" ::: ")[1]);
                         }
+                        if (queDato.Equals("baseDeDatos"))
+                        {
+                            txtBaseDeDatos.Text = aes.DesEncriptarDato(dato.Split(" ::: ")[1]);
+                        }
+                        if (queDato.Equals("productos"))
+                        {
+                            txtConsultaProductos.Text = aes.DesEncriptarDato(dato.Split(" ::: ")[1]);
+                        }
+                        if (queDato.Equals("pedidos"))
+                        {
+                            txtConsultaVentas.Text = aes.DesEncriptarDato(dato.Split(" ::: ")[1]);
+                        }
                     }
                 }
             }
@@ -119,8 +138,12 @@ namespace SistemaParaPrediccionDeVentas.Vista
                     txtPuerto.Enabled = true;
                     txtUsuario.Enabled = true;
                     txtContrasena.Enabled = true;
+                    txtBaseDeDatos.Enabled = true;
+                    txtConsultaProductos.Enabled = true;
+                    txtConsultaVentas.Enabled = true;
                     btnGuardar.Enabled = true;
                     btnModificar.Enabled = false;
+                    btnProbarConexion.Enabled = false;
                 }
             }
         }
@@ -155,6 +178,18 @@ namespace SistemaParaPrediccionDeVentas.Vista
             {
                 msjError = msjError + "Ingrese la contraseña.\n";
             }
+            if (txtBaseDeDatos.Text == "")
+            {
+                msjError = msjError + "Ingrese el nombre de la base de datos.\n";
+            }
+            if (txtConsultaProductos.Text == "")
+            {
+                msjError = msjError + "Ingrese la consulta para los productos.\n";
+            }
+            if (txtConsultaVentas.Text == "")
+            {
+                msjError = msjError + "Ingrese la consulta de las ventas.";
+            }
 
             if (msjError != "")
             {
@@ -165,14 +200,14 @@ namespace SistemaParaPrediccionDeVentas.Vista
             //GUARDAR LA CONFIGURACION DEL SERVIDOR
             if (cmbServidor.SelectedIndex == 0)
             {
-                if (ctrler.GuardarConfiguracionMySQL(aes.EncriptarDato(txtHost.Text), aes.EncriptarDato(txtPuerto.Text), aes.EncriptarDato(txtUsuario.Text), aes.EncriptarDato(txtContrasena.Text)))
+                if (ctrler.GuardarConfiguracionMySQL(aes.EncriptarDato(txtHost.Text), aes.EncriptarDato(txtPuerto.Text), aes.EncriptarDato(txtUsuario.Text), aes.EncriptarDato(txtContrasena.Text), aes.EncriptarDato(txtBaseDeDatos.Text), aes.EncriptarDato(txtConsultaProductos.Text), aes.EncriptarDato(txtConsultaVentas.Text)))
                 {
                     msgBox.Info("Atención", "Se guardaron los datos.");
                 }
             }
             else if (cmbServidor.SelectedIndex == 1)
             {
-                if (ctrler.GuardarConfiguracionSQLServer(aes.EncriptarDato(txtHost.Text), aes.EncriptarDato(txtPuerto.Text), aes.EncriptarDato(txtUsuario.Text), aes.EncriptarDato(txtContrasena.Text)))
+                if (ctrler.GuardarConfiguracionSQLServer(aes.EncriptarDato(txtHost.Text), aes.EncriptarDato(txtPuerto.Text), aes.EncriptarDato(txtUsuario.Text), aes.EncriptarDato(txtContrasena.Text), aes.EncriptarDato(txtBaseDeDatos.Text)))
                 {
                     msgBox.Info("Atención", "Se guardaron los datos.");
                 }
@@ -184,13 +219,91 @@ namespace SistemaParaPrediccionDeVentas.Vista
             txtPuerto.Enabled = false;
             txtUsuario.Enabled = false;
             txtContrasena.Enabled = false;
+            txtBaseDeDatos.Enabled = false;
+            txtConsultaProductos.Enabled = false;
+            txtConsultaVentas.Enabled = false;
             btnGuardar.Enabled = false;
             btnModificar.Enabled = true;
+            btnProbarConexion.Enabled = true;
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnProbarConexion_Click(object sender, EventArgs e)
+        {
+            msgCargando msgFrm = new msgCargando();
+            MsgBoxController msgBox = new MsgBoxController();
+            BDController con = new BDController();
+
+            msgFrm.lblTitulo.Text = "Probando conexión.....";
+            msgFrm.Show();
+            System.Threading.Thread.Sleep(1000);
+
+            con.Conectar();
+
+            if (con.conectado)
+            {
+                msgFrm.Close();
+                msgBox.Info("Atención", "¡Conexión exitosa!");
+
+                msgCargando msgFrm2 = new msgCargando();
+                msgFrm2.lblTitulo.Text = "Probando consulta productos.....";
+                msgFrm2.Show();
+
+                System.Threading.Thread.Sleep(1000);
+
+                List<string>[] listaSelectProductos = con.BDSelectProductos(txtConsultaProductos.Text);
+
+                if (con.consultaProductos)
+                {
+                    msgFrm2.Close();
+                    msgBox.Info("Atención", "¡Se obtuvieron los datos de la consulta!");
+                }
+                else
+                {
+                    msgFrm2.Close();
+                    msgBox.Errorr("Atención", con.mensajeErrorConsultaProductos);
+                }
+
+                msgCargando msgFrm3 = new msgCargando();
+                msgFrm3.lblTitulo.Text = "Probando consulta ventas.....";
+                msgFrm3.Show();
+
+                System.Threading.Thread.Sleep(1000);
+
+                List<string>[] listaSelectPedidos = con.BDSelectPedidos(txtConsultaVentas.Text);
+
+                if (con.consultaPedidos)
+                {
+                    msgFrm3.Close();
+                    msgBox.Info("Atención", "¡Se obtuvieron los datos de la consulta!");
+                }
+                else
+                {
+                    msgFrm3.Close();
+                    msgBox.Errorr("Atención", con.mensajeErrorConsultaPedidos);
+                }
+            }
+            else
+            {
+                msgFrm.Close();
+                msgBox.Errorr("Atención", con.mensajeErrorConexion);
+            }
+        }
+
+        private void btnHelp_Click(object sender, EventArgs e)
+        {
+            MsgBoxController msgBox = new MsgBoxController();
+            msgBox.Info(" ", "Ingrese una consulta que devuelta la fecha de la compra, el código del producto y la cantidad comprada con los nombres fecha, código, cantidad respectivamente (ej. select pedido.fecha_compra as fecha, detalle_pedido.producto_id as codigo, detalle_pedido.cantidad_vendida as cantidad from pedido join detalle_pedido on pedido.id = detalle_pedido.pedido_id)");
+        }
+
+        private void btnHelpProductos_Click(object sender, EventArgs e)
+        {
+            MsgBoxController msgBox = new MsgBoxController();
+            msgBox.Info(" ", "Ingrese una consulta que devuelta los campos código único del producto y el nombre del producto con los nombres codigo y nombre respectivamente (ej. select codigo_producto as codigo, nombre_producto as nombre from productos)");
         }
     }
 }

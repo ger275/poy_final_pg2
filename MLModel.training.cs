@@ -14,9 +14,10 @@ namespace SistemaParaPrediccionDeVentas
 {
     public partial class MLModel
     {
-        public const string RetrainFilePath =  @"C:\Users\Windows 10\Tareas\2023\segundo semestre\pg_2\DATOS\CSV\VENTAS.csv";
+        public const string RetrainFilePath =  @"C:\Users\Windows 10\Tareas\2023\segundo semestre\pg_2\DATOS\CSV\S10_1678.csv";
         public const char RetrainSeparatorChar = ';';
         public const bool RetrainHasHeader =  true;
+        public const bool RetrainAllowQuoting =  true;
 
          /// <summary>
         /// Train a new model with the provided dataset.
@@ -25,11 +26,11 @@ namespace SistemaParaPrediccionDeVentas
         /// <param name="inputDataFilePath">Path to the data file for training.</param>
         /// <param name="separatorChar">Separator character for delimited training file.</param>
         /// <param name="hasHeader">Boolean if training file has a header.</param>
-        public static void Train(string outputModelPath, string inputDataFilePath = RetrainFilePath, char separatorChar = RetrainSeparatorChar, bool hasHeader = RetrainHasHeader)
+        public static void Train(string outputModelPath, string inputDataFilePath = RetrainFilePath, char separatorChar = RetrainSeparatorChar, bool hasHeader = RetrainHasHeader, bool allowQuoting = RetrainAllowQuoting)
         {
             var mlContext = new MLContext();
 
-            var data = LoadIDataViewFromFile(mlContext, inputDataFilePath, separatorChar, hasHeader);
+            var data = LoadIDataViewFromFile(mlContext, inputDataFilePath, separatorChar, hasHeader, allowQuoting);
             var model = RetrainModel(mlContext, data);
             SaveModel(mlContext, model, data, outputModelPath);
         }
@@ -42,9 +43,9 @@ namespace SistemaParaPrediccionDeVentas
         /// <param name="separatorChar">Separator character for delimited training file.</param>
         /// <param name="hasHeader">Boolean if training file has a header.</param>
         /// <returns>IDataView with loaded training data.</returns>
-        public static IDataView LoadIDataViewFromFile(MLContext mlContext, string inputDataFilePath, char separatorChar, bool hasHeader)
+        public static IDataView LoadIDataViewFromFile(MLContext mlContext, string inputDataFilePath, char separatorChar, bool hasHeader, bool allowQuoting)
         {
-            return mlContext.Data.LoadFromTextFile<ModelInput>(inputDataFilePath, separatorChar, hasHeader);
+            return mlContext.Data.LoadFromTextFile<ModelInput>(inputDataFilePath, separatorChar, hasHeader, allowQuoting: allowQuoting);
         }
 
 
@@ -89,8 +90,9 @@ namespace SistemaParaPrediccionDeVentas
         public static IEstimator<ITransformer> BuildPipeline(MLContext mlContext)
         {
             // Data process configuration with pipeline data transformations
-            var pipeline = mlContext.Transforms.ReplaceMissingValues(@"fecha", @"fecha")      
-                                    .Append(mlContext.Transforms.Concatenate(@"Features", new []{@"fecha"}))      
+            var pipeline = mlContext.Transforms.Text.FeaturizeText(inputColumnName:@"producto",outputColumnName:@"producto")      
+                                    .Append(mlContext.Transforms.Conversion.ConvertType(@"fecha", @"fecha"))      
+                                    .Append(mlContext.Transforms.Concatenate(@"Features", new []{@"producto",@"fecha"}))      
                                     .Append(mlContext.Regression.Trainers.FastForest(new FastForestRegressionTrainer.Options(){NumberOfTrees=4,NumberOfLeaves=4,FeatureFraction=1F,LabelColumnName=@"cantidad",FeatureColumnName=@"Features"}));
 
             return pipeline;

@@ -15,7 +15,7 @@ namespace SistemaParaPrediccionDeVentas.Controlador
 
         }
 
-        public bool GuardarConfiguracionMySQL(string host, string puerto, string usuario, string contrasena)
+        public bool GuardarConfiguracionMySQL(string host, string puerto, string usuario, string contrasena, string baseDeDatos, string consultaProductos, string consultaPedidos)
         {
             AES aES = new AES();
             string nombreArchivo = "ConfigBDMySQL.txt";
@@ -34,6 +34,9 @@ namespace SistemaParaPrediccionDeVentas.Controlador
                 sw.WriteLine(aES.EncriptarDato("puerto") + " ::: " + puerto);
                 sw.WriteLine(aES.EncriptarDato("usuario") + " ::: " + usuario);
                 sw.WriteLine(aES.EncriptarDato("contrasena") + " ::: " + contrasena);
+                sw.WriteLine(aES.EncriptarDato("baseDeDatos") + " ::: " + baseDeDatos);
+                sw.WriteLine(aES.EncriptarDato("productos") + " ::: " + consultaProductos);
+                sw.WriteLine(aES.EncriptarDato("pedidos") + " ::: " + consultaPedidos);
                 sw.Close();
             }
 
@@ -51,7 +54,7 @@ namespace SistemaParaPrediccionDeVentas.Controlador
             return true;
         }
 
-        public bool GuardarConfiguracionSQLServer(string host, string puerto, string usuario, string contrasena)
+        public bool GuardarConfiguracionSQLServer(string host, string puerto, string usuario, string contrasena, string baseDeDatos)
         {
             AES aES = new AES();
             string nombreArchivo = "ConfigBDSQLServer.txt";
@@ -70,6 +73,7 @@ namespace SistemaParaPrediccionDeVentas.Controlador
                 sw.WriteLine(aES.EncriptarDato("puerto") + " ::: " + puerto);
                 sw.WriteLine(aES.EncriptarDato("usuario") + " ::: " + usuario);
                 sw.WriteLine(aES.EncriptarDato("contrasena") + " ::: " + contrasena);
+                sw.WriteLine(aES.EncriptarDato("baseDeDatos") + " ::: " + baseDeDatos);
                 sw.Close();
             }
 
@@ -87,7 +91,7 @@ namespace SistemaParaPrediccionDeVentas.Controlador
             return true;
         }
 
-        public List<string> GetConfiguracion()
+        public List<string> GetConfiguracion() //este metodo se llama desde la vista de configuracion y desde el controlador de la base de datos para recuperar la configuración guardada
         {
             string nombreArchivo = "ConfigBDMySQL.txt";
             string linea = "";
@@ -139,5 +143,6 @@ namespace SistemaParaPrediccionDeVentas.Controlador
 
             return lineaArray;
         }
+
     }
 }

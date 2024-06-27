@@ -1,3 +1,5 @@
+using SistemaParaPrediccionDeVentas.Vista.MSGBOX;
+using SistemaParaPrediccionDeVentas.Vista;
 using System.Runtime.InteropServices;
 
 namespace SistemaParaPrediccionDeVentas
@@ -81,46 +83,88 @@ namespace SistemaParaPrediccionDeVentas
 
         private void btnPredecir_Click(object sender, EventArgs e)
         {
-            abrirFormularioHijo(new Vista.frmPredecir());
+            //abrirFormularioHijo(new Vista.frmPredecir());
         }
 
-        private Form formularioActivo = null;
-        private void abrirFormularioHijo(Form formularioHijo)
+        private Form[] formularioActivo = null;
+
+        private void abrirFormularioHijo(Form formularioHijo, int indice)
         {
             if (formularioActivo != null)
             {
-                formularioActivo.Close();
+                //formularioActivo.Close();
             }
 
-            formularioActivo = formularioHijo;
+            if (formularioActivo == null)
+            {
+                formularioActivo = new Form[10];
+            }
+
+            formularioActivo[indice] = formularioHijo;
+            formularioActivo[indice].TopLevel = false;
+            formularioActivo[indice].Location = new Point(((pFormulariosHijos.Width / 2) - (formularioHijo.Width / 2)), ((pFormulariosHijos.Height / 2) - (formularioHijo.Height / 2)));
+            pFormulariosHijos.Controls.Add(formularioActivo[indice]);
+            pFormulariosHijos.Tag = formularioActivo[indice];
+            formularioActivo[indice].BringToFront();
+            formularioActivo[indice].Show();
+
+            /*formularioActivo = formularioHijo;
             formularioHijo.TopLevel = false;
-            //formularioHijo.FormBorderStyle = FormBorderStyle.None;
-            //formularioHijo.Dock = DockStyle.Fill;
             formularioHijo.Location = new Point(((pFormulariosHijos.Width / 2) - (formularioHijo.Width / 2)), ((pFormulariosHijos.Height / 2) - (formularioHijo.Height / 2)));
             pFormulariosHijos.Controls.Add(formularioHijo);
             pFormulariosHijos.Tag = formularioHijo;
             formularioHijo.BringToFront();
-            formularioHijo.Show();
+            formularioHijo.Show();*/
         }
 
         private void btnPrediccionActual_Click(object sender, EventArgs e)
         {
-            abrirFormularioHijo(new Vista.frmReportPrediccionActual());
+            //abrirFormularioHijo(new Vista.frmReportPrediccionActual());
         }
 
         private void btnComparativo_Click(object sender, EventArgs e)
         {
-            abrirFormularioHijo(new Vista.frmReporteComparativo());
+            //abrirFormularioHijo(new Vista.frmReporteComparativo());
         }
 
         private void btnGraficas_Click(object sender, EventArgs e)
         {
-            abrirFormularioHijo(new Vista.frmGraficas());
+            //abrirFormularioHijo(new Vista.frmGraficas());
         }
 
         private void btnConfiguracion_Click(object sender, EventArgs e)
         {
-            abrirFormularioHijo(new Vista.frmConfiguracion());
+            if (!pConfiguracion.Visible)
+            {
+                pConfiguracion.Visible = true;
+                pConfiguracion.BringToFront();
+            }
+            else
+            {
+                pConfiguracion.Visible = false;
+            }
+        }
+
+        private void btnConfigServidor_Click(object sender, EventArgs e)
+        {
+            frmConfiguracion frm = new frmConfiguracion();
+            abrirFormularioHijo(frm, frm.indice);
+
+            if (pConfiguracion.Visible)
+            {
+                pConfiguracion.Visible = false;
+            }
+        }
+
+        private void btnEntrenarModelo_Click(object sender, EventArgs e)
+        {
+            frmEntrenarModelo frm = new frmEntrenarModelo();
+            abrirFormularioHijo(frm, frm.indice);
+
+            if (pConfiguracion.Visible)
+            {
+                pConfiguracion.Visible = false;
+            }
         }
     }
 }
