@@ -30,6 +30,7 @@ namespace SistemaParaPrediccionDeVentas
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
+            cerrarMenus();
         }
 
         private void btnMouseEnter(object sender, EventArgs e)
@@ -150,10 +151,7 @@ namespace SistemaParaPrediccionDeVentas
             frmConfiguracion frm = new frmConfiguracion();
             abrirFormularioHijo(frm, frm.indice);
 
-            if (pConfiguracion.Visible)
-            {
-                pConfiguracion.Visible = false;
-            }
+            cerrarMenus();
         }
 
         private void btnEntrenarModelo_Click(object sender, EventArgs e)
@@ -161,10 +159,25 @@ namespace SistemaParaPrediccionDeVentas
             frmEntrenarModelo frm = new frmEntrenarModelo();
             abrirFormularioHijo(frm, frm.indice);
 
+            cerrarMenus();
+        }
+
+        private void pFormulariosHijos_Click(object sender, EventArgs e)
+        {
+            cerrarMenus();
+        }
+
+        public void cerrarMenus()
+        {
             if (pConfiguracion.Visible)
             {
                 pConfiguracion.Visible = false;
             }
+        }
+
+        private void pMenu_Click(object sender, EventArgs e)
+        {
+            //no entra a este metodo, entra al de panel mousedown
         }
     }
 }

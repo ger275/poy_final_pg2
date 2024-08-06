@@ -43,6 +43,10 @@
             panel4 = new Panel();
             pFormulariosHijos = new Panel();
             pConfiguracion = new Panel();
+            panel7 = new Panel();
+            panel6 = new Panel();
+            panel5 = new Panel();
+            panel1 = new Panel();
             btnEntrenarModelo = new Button();
             btnConfigServidor = new Button();
             pictureBox1 = new PictureBox();
@@ -74,6 +78,7 @@
             pMenu.Name = "pMenu";
             pMenu.Size = new Size(1121, 60);
             pMenu.TabIndex = 0;
+            pMenu.Click += pMenu_Click;
             pMenu.MouseDown += panel1_MouseDown;
             // 
             // btnConfiguracion
@@ -243,17 +248,58 @@
             pFormulariosHijos.Name = "pFormulariosHijos";
             pFormulariosHijos.Size = new Size(1109, 605);
             pFormulariosHijos.TabIndex = 5;
+            pFormulariosHijos.Click += pFormulariosHijos_Click;
             // 
             // pConfiguracion
             // 
             pConfiguracion.BackColor = Color.FromArgb(74, 87, 108);
+            pConfiguracion.Controls.Add(panel7);
+            pConfiguracion.Controls.Add(panel6);
+            pConfiguracion.Controls.Add(panel5);
+            pConfiguracion.Controls.Add(panel1);
             pConfiguracion.Controls.Add(btnEntrenarModelo);
             pConfiguracion.Controls.Add(btnConfigServidor);
             pConfiguracion.Location = new Point(498, 0);
             pConfiguracion.Name = "pConfiguracion";
-            pConfiguracion.Size = new Size(200, 173);
+            pConfiguracion.Size = new Size(200, 107);
             pConfiguracion.TabIndex = 8;
             pConfiguracion.Visible = false;
+            // 
+            // panel7
+            // 
+            panel7.BackColor = Color.FromArgb(104, 116, 135);
+            panel7.Dock = DockStyle.Bottom;
+            panel7.Location = new Point(1, 106);
+            panel7.Name = "panel7";
+            panel7.Size = new Size(198, 1);
+            panel7.TabIndex = 14;
+            // 
+            // panel6
+            // 
+            panel6.BackColor = Color.FromArgb(104, 116, 135);
+            panel6.Dock = DockStyle.Left;
+            panel6.Location = new Point(0, 0);
+            panel6.Name = "panel6";
+            panel6.Size = new Size(1, 107);
+            panel6.TabIndex = 13;
+            // 
+            // panel5
+            // 
+            panel5.BackColor = Color.FromArgb(104, 116, 135);
+            panel5.Dock = DockStyle.Right;
+            panel5.Location = new Point(199, 0);
+            panel5.Name = "panel5";
+            panel5.Size = new Size(1, 107);
+            panel5.TabIndex = 12;
+            // 
+            // panel1
+            // 
+            panel1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            panel1.BackColor = Color.FromArgb(104, 116, 135);
+            panel1.Location = new Point(7, 46);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(185, 1);
+            panel1.TabIndex = 11;
             // 
             // btnEntrenarModelo
             // 
@@ -262,11 +308,12 @@
             btnEntrenarModelo.FlatStyle = FlatStyle.Flat;
             btnEntrenarModelo.Font = new Font("Lato", 15.7499981F, FontStyle.Bold, GraphicsUnit.Point);
             btnEntrenarModelo.ForeColor = Color.White;
-            btnEntrenarModelo.Location = new Point(0, 46);
+            btnEntrenarModelo.Location = new Point(0, 53);
             btnEntrenarModelo.Name = "btnEntrenarModelo";
             btnEntrenarModelo.Size = new Size(200, 40);
             btnEntrenarModelo.TabIndex = 10;
-            btnEntrenarModelo.Text = "Entrenar modelo";
+            btnEntrenarModelo.Text = "  Entrenar modelo";
+            btnEntrenarModelo.TextAlign = ContentAlignment.MiddleLeft;
             btnEntrenarModelo.UseVisualStyleBackColor = true;
             btnEntrenarModelo.Click += btnEntrenarModelo_Click;
             // 
@@ -281,7 +328,8 @@
             btnConfigServidor.Name = "btnConfigServidor";
             btnConfigServidor.Size = new Size(200, 40);
             btnConfigServidor.TabIndex = 9;
-            btnConfigServidor.Text = "Servidor";
+            btnConfigServidor.Text = "  Servidor";
+            btnConfigServidor.TextAlign = ContentAlignment.MiddleLeft;
             btnConfigServidor.UseVisualStyleBackColor = true;
             btnConfigServidor.Click += btnConfigServidor_Click;
             // 
@@ -314,7 +362,7 @@
             pReportes.Controls.Add(btnPrediccionActual);
             pReportes.Location = new Point(166, 0);
             pReportes.Name = "pReportes";
-            pReportes.Size = new Size(200, 173);
+            pReportes.Size = new Size(200, 243);
             pReportes.TabIndex = 5;
             pReportes.Visible = false;
             // 
@@ -325,7 +373,7 @@
             button6.FlatStyle = FlatStyle.Flat;
             button6.Font = new Font("Lato", 15.7499981F, FontStyle.Bold, GraphicsUnit.Point);
             button6.ForeColor = Color.Gainsboro;
-            button6.Location = new Point(0, 112);
+            button6.Location = new Point(0, 183);
             button6.Name = "button6";
             button6.Size = new Size(200, 40);
             button6.TabIndex = 10;
@@ -339,7 +387,7 @@
             btnComparativo.FlatStyle = FlatStyle.Flat;
             btnComparativo.Font = new Font("Lato", 15.7499981F, FontStyle.Bold, GraphicsUnit.Point);
             btnComparativo.ForeColor = Color.Gainsboro;
-            btnComparativo.Location = new Point(0, 56);
+            btnComparativo.Location = new Point(0, 133);
             btnComparativo.Name = "btnComparativo";
             btnComparativo.Size = new Size(200, 40);
             btnComparativo.TabIndex = 9;
@@ -354,7 +402,7 @@
             btnPrediccionActual.FlatStyle = FlatStyle.Flat;
             btnPrediccionActual.Font = new Font("Lato", 15.7499981F, FontStyle.Bold, GraphicsUnit.Point);
             btnPrediccionActual.ForeColor = Color.Gainsboro;
-            btnPrediccionActual.Location = new Point(0, 0);
+            btnPrediccionActual.Location = new Point(0, 87);
             btnPrediccionActual.Name = "btnPrediccionActual";
             btnPrediccionActual.Size = new Size(200, 40);
             btnPrediccionActual.TabIndex = 8;
@@ -409,5 +457,9 @@
         private Panel pConfiguracion;
         private Button btnEntrenarModelo;
         private Button btnConfigServidor;
+        private Panel panel1;
+        private Panel panel5;
+        private Panel panel7;
+        private Panel panel6;
     }
 }

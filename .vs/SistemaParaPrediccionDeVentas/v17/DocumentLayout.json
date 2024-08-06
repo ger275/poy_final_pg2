@@ -1,0 +1,68 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Windows 10\\Tareas\\2023\\segundo semestre\\pg_2\\CODIGO\\SistemaParaPrediccionDeVentas\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{D66FD6DD-3CC0-47DE-8447-A74115D23C3B}|SistemaParaPrediccionDeVentas.csproj|c:\\users\\windows 10\\tareas\\2023\\segundo semestre\\pg_2\\codigo\\sistemaparapredicciondeventas\\frmprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D66FD6DD-3CC0-47DE-8447-A74115D23C3B}|SistemaParaPrediccionDeVentas.csproj|solutionrelative:frmprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D66FD6DD-3CC0-47DE-8447-A74115D23C3B}|SistemaParaPrediccionDeVentas.csproj|C:\\Users\\Windows 10\\Tareas\\2023\\segundo semestre\\pg_2\\CODIGO\\SistemaParaPrediccionDeVentas\\frmprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D66FD6DD-3CC0-47DE-8447-A74115D23C3B}|SistemaParaPrediccionDeVentas.csproj|solutionrelative:frmprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D66FD6DD-3CC0-47DE-8447-A74115D23C3B}|SistemaParaPrediccionDeVentas.csproj|c:\\users\\windows 10\\tareas\\2023\\segundo semestre\\pg_2\\codigo\\sistemaparapredicciondeventas\\controlador\\bdcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D66FD6DD-3CC0-47DE-8447-A74115D23C3B}|SistemaParaPrediccionDeVentas.csproj|solutionrelative:controlador\\bdcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "frmPrincipal.cs",
+              "DocumentMoniker": "C:\\Users\\Windows 10\\Tareas\\2023\\segundo semestre\\pg_2\\CODIGO\\SistemaParaPrediccionDeVentas\\frmPrincipal.cs",
+              "RelativeDocumentMoniker": "frmPrincipal.cs",
+              "ToolTip": "C:\\Users\\Windows 10\\Tareas\\2023\\segundo semestre\\pg_2\\CODIGO\\SistemaParaPrediccionDeVentas\\frmPrincipal.cs",
+              "RelativeToolTip": "frmPrincipal.cs",
+              "ViewState": "AQIAAJEAAAAAAAAAAAAQwLAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-21T02:20:51.938Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "frmPrincipal.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Windows 10\\Tareas\\2023\\segundo semestre\\pg_2\\CODIGO\\SistemaParaPrediccionDeVentas\\frmPrincipal.cs",
+              "RelativeDocumentMoniker": "frmPrincipal.cs",
+              "ToolTip": "C:\\Users\\Windows 10\\Tareas\\2023\\segundo semestre\\pg_2\\CODIGO\\SistemaParaPrediccionDeVentas\\frmPrincipal.cs [Dise\u00F1o]",
+              "RelativeToolTip": "frmPrincipal.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-21T02:16:19.583Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "BDController.cs",
+              "DocumentMoniker": "C:\\Users\\Windows 10\\Tareas\\2023\\segundo semestre\\pg_2\\CODIGO\\SistemaParaPrediccionDeVentas\\Controlador\\BDController.cs",
+              "RelativeDocumentMoniker": "Controlador\\BDController.cs",
+              "ToolTip": "C:\\Users\\Windows 10\\Tareas\\2023\\segundo semestre\\pg_2\\CODIGO\\SistemaParaPrediccionDeVentas\\Controlador\\BDController.cs",
+              "RelativeToolTip": "Controlador\\BDController.cs",
+              "ViewState": "AQIAAIYAAAAAAAAAAAAwwJoAAABpAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-19T01:18:20.962Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

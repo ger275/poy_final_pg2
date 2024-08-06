@@ -31,6 +31,7 @@
             btnOk = new Button();
             lblSubtitulo = new Label();
             lblTitulo = new Label();
+            pBar = new ProgressBar();
             SuspendLayout();
             // 
             // btnOk
@@ -46,7 +47,7 @@
             // 
             // lblSubtitulo
             // 
-            lblSubtitulo.Location = new Point(1, 47);
+            lblSubtitulo.Location = new Point(1, 41);
             lblSubtitulo.Name = "lblSubtitulo";
             lblSubtitulo.Size = new Size(304, 23);
             lblSubtitulo.TabIndex = 21;
@@ -55,21 +56,29 @@
             // 
             // lblTitulo
             // 
-            lblTitulo.Font = new Font("Segoe UI Black", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
-            lblTitulo.Location = new Point(-1, 9);
+            lblTitulo.Font = new Font("Segoe UI Black", 14F, FontStyle.Bold, GraphicsUnit.Point);
+            lblTitulo.Location = new Point(-1, 3);
             lblTitulo.Name = "lblTitulo";
             lblTitulo.Size = new Size(306, 38);
             lblTitulo.TabIndex = 22;
             lblTitulo.Text = "mensaje";
             lblTitulo.TextAlign = ContentAlignment.MiddleCenter;
             // 
+            // pBar
+            // 
+            pBar.Location = new Point(12, 65);
+            pBar.Name = "pBar";
+            pBar.Size = new Size(282, 23);
+            pBar.TabIndex = 23;
+            // 
             // msgCargando
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(306, 85);
+            ClientSize = new Size(306, 91);
             ControlBox = false;
+            Controls.Add(pBar);
             Controls.Add(lblTitulo);
             Controls.Add(lblSubtitulo);
             Controls.Add(btnOk);
@@ -83,5 +92,6 @@
         public Button btnOk;
         public Label lblSubtitulo;
         public Label lblTitulo;
+        public ProgressBar pBar;
     }
 }

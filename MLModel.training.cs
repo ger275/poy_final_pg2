@@ -14,7 +14,7 @@ namespace SistemaParaPrediccionDeVentas
 {
     public partial class MLModel
     {
-        public const string RetrainFilePath =  @"C:\Users\Windows 10\Tareas\2023\segundo semestre\pg_2\DATOS\CSV\S10_1678.csv";
+        public const string RetrainFilePath =  @"C:\Users\Windows 10\AppData\Local\SistemaPrediccion\Temp\ventas_2024_7_18_21_55_10.csv";
         public const char RetrainSeparatorChar = ';';
         public const bool RetrainHasHeader =  true;
         public const bool RetrainAllowQuoting =  true;

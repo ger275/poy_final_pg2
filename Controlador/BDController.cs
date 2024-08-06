@@ -152,7 +152,7 @@ namespace SistemaParaPrediccionDeVentas.Controlador
             {
                 try
                 {
-                    MySqlCommand cmd = new MySqlCommand("select fecha, codigo, cantidad from (" + consulta + ") as b", conexion);
+                    MySqlCommand cmd = new MySqlCommand("select date_format(fecha, '%Y-%m-%d') as fecha, 'B001' as codigo, floor(cantidad) as cantidad from (" + consulta + ") as b", conexion);
                     MySqlDataReader reader = cmd.ExecuteReader();
 
                     while (reader.Read())

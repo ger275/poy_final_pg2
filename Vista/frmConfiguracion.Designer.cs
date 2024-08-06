@@ -34,11 +34,12 @@
             panel6 = new Panel();
             panel1 = new Panel();
             button2 = new Button();
-            label1 = new Label();
+            lblTitulo = new Label();
             btnMaximizar = new Button();
             btnRestaurar = new Button();
             btnCerrar = new Button();
             panel2 = new Panel();
+            panel11 = new Panel();
             panel8 = new Panel();
             panel3 = new Panel();
             panel5 = new Panel();
@@ -67,7 +68,6 @@
             txtConsultaProductos = new TextBox();
             label9 = new Label();
             btnHelpProductos = new Label();
-            panel11 = new Panel();
             panelTitulo.SuspendLayout();
             panel2.SuspendLayout();
             panel3.SuspendLayout();
@@ -81,7 +81,7 @@
             panelTitulo.Controls.Add(panel6);
             panelTitulo.Controls.Add(panel1);
             panelTitulo.Controls.Add(button2);
-            panelTitulo.Controls.Add(label1);
+            panelTitulo.Controls.Add(lblTitulo);
             panelTitulo.Controls.Add(btnMaximizar);
             panelTitulo.Controls.Add(btnRestaurar);
             panelTitulo.Controls.Add(btnCerrar);
@@ -134,18 +134,19 @@
             button2.UseVisualStyleBackColor = true;
             button2.Click += button2_Click;
             // 
-            // label1
+            // lblTitulo
             // 
-            label1.Font = new Font("Lato", 23.9999962F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.ForeColor = Color.Gainsboro;
-            label1.Image = (Image)resources.GetObject("label1.Image");
-            label1.ImageAlign = ContentAlignment.MiddleLeft;
-            label1.Location = new Point(12, 8);
-            label1.Name = "label1";
-            label1.Size = new Size(170, 40);
-            label1.TabIndex = 15;
-            label1.Text = "Servidor";
-            label1.TextAlign = ContentAlignment.MiddleRight;
+            lblTitulo.Font = new Font("Lato", 23.9999962F, FontStyle.Bold, GraphicsUnit.Point);
+            lblTitulo.ForeColor = Color.Gainsboro;
+            lblTitulo.Image = (Image)resources.GetObject("lblTitulo.Image");
+            lblTitulo.ImageAlign = ContentAlignment.MiddleLeft;
+            lblTitulo.Location = new Point(12, 8);
+            lblTitulo.Name = "lblTitulo";
+            lblTitulo.Size = new Size(170, 40);
+            lblTitulo.TabIndex = 15;
+            lblTitulo.Text = "Servidor";
+            lblTitulo.TextAlign = ContentAlignment.MiddleRight;
+            lblTitulo.MouseDown += lblTitulo_MouseDown;
             // 
             // btnMaximizar
             // 
@@ -195,6 +196,15 @@
             panel2.Name = "panel2";
             panel2.Size = new Size(6, 390);
             panel2.TabIndex = 4;
+            // 
+            // panel11
+            // 
+            panel11.BackColor = Color.FromArgb(104, 116, 135);
+            panel11.Dock = DockStyle.Bottom;
+            panel11.Location = new Point(1, 389);
+            panel11.Name = "panel11";
+            panel11.Size = new Size(5, 1);
+            panel11.TabIndex = 1;
             // 
             // panel8
             // 
@@ -327,6 +337,7 @@
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            label5.ForeColor = SystemColors.ControlText;
             label5.Location = new Point(59, 69);
             label5.Name = "label5";
             label5.Size = new Size(64, 20);
@@ -500,15 +511,6 @@
             btnHelpProductos.TabIndex = 28;
             btnHelpProductos.Click += btnHelpProductos_Click;
             // 
-            // panel11
-            // 
-            panel11.BackColor = Color.FromArgb(104, 116, 135);
-            panel11.Dock = DockStyle.Bottom;
-            panel11.Location = new Point(1, 389);
-            panel11.Name = "panel11";
-            panel11.Size = new Size(5, 1);
-            panel11.TabIndex = 1;
-            // 
             // frmConfiguracion
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -557,7 +559,7 @@
         #endregion
 
         private Panel panelTitulo;
-        private Label label1;
+        private Label lblTitulo;
         private Button btnMaximizar;
         private Button btnRestaurar;
         private Button btnCerrar;

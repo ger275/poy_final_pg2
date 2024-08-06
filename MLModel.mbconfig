@@ -8,7 +8,7 @@
     "KeepPunctuations": false,
     "AllowQuoting": true,
     "Type": "TabularFile",
-    "FilePath": "C:\\Users\\Windows 10\\Tareas\\2023\\segundo semestre\\pg_2\\DATOS\\CSV\\S10_1678.csv",
+    "FilePath": "C:\\Users\\Windows 10\\AppData\\Local\\SistemaPrediccion\\Temp\\ventas_2024_7_18_21_55_10.csv",
     "Delimiter": ";",
     "DecimalMarker": ".",
     "HasHeader": true,
@@ -51,8 +51,8 @@
         "Version": 1,
         "Type": "Trial",
         "TrainerName": "FastForestRegression",
-        "Score": -0.081298609735545341,
-        "RuntimeInSeconds": 1.865,
+        "Score": 0.0,
+        "RuntimeInSeconds": 1.691,
         "Parameter": {
           "_SCHEMA_": "e0 * e1 * e2 * e4",
           "e0": {
@@ -87,11 +87,11 @@
       {
         "Version": 1,
         "Type": "Trial",
-        "TrainerName": "LightGbmRegression",
-        "Score": -0.30486201849548344,
-        "RuntimeInSeconds": 0.883,
+        "TrainerName": "FastForestRegression",
+        "Score": 0.0,
+        "RuntimeInSeconds": 0.725,
         "Parameter": {
-          "_SCHEMA_": "e0 * e1 * e2 * e5",
+          "_SCHEMA_": "e0 * e1 * e2 * e4",
           "e0": {
             "InputColumnName": "producto",
             "OutputColumnName": "producto"
@@ -112,16 +112,10 @@
             ],
             "OutputColumnName": "Features"
           },
-          "e5": {
+          "e4": {
+            "NumberOfTrees": 9,
             "NumberOfLeaves": 4,
-            "MinimumExampleCountPerLeaf": 20,
-            "LearningRate": 1.0,
-            "NumberOfTrees": 4,
-            "SubsampleFraction": 1.0,
-            "MaximumBinCountPerFeature": 254,
-            "FeatureFraction": 1.0,
-            "L1Regularization": 2E-10,
-            "L2Regularization": 1.0,
+            "FeatureFraction": 0.997028,
             "LabelColumnName": "cantidad",
             "FeatureColumnName": "Features"
           }
@@ -131,8 +125,8 @@
         "Version": 1,
         "Type": "Trial",
         "TrainerName": "FastTreeRegression",
-        "Score": -4.4177030800033288,
-        "RuntimeInSeconds": 0.783,
+        "Score": "NaN",
+        "RuntimeInSeconds": 0.762,
         "Parameter": {
           "_SCHEMA_": "e0 * e1 * e2 * e3",
           "e0": {

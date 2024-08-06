@@ -113,7 +113,6 @@ C:\Users\Windows 10\Tareas\2023\segundo semestre\pg_2\CODIGO\SistemaParaPredicci
 C:\Users\Windows 10\Tareas\2023\segundo semestre\pg_2\CODIGO\SistemaParaPrediccionDeVentas\obj\Debug\net6.0-windows\SistemaParaPrediccionDeVentas.AssemblyInfoInputs.cache
 C:\Users\Windows 10\Tareas\2023\segundo semestre\pg_2\CODIGO\SistemaParaPrediccionDeVentas\obj\Debug\net6.0-windows\SistemaParaPrediccionDeVentas.AssemblyInfo.cs
 C:\Users\Windows 10\Tareas\2023\segundo semestre\pg_2\CODIGO\SistemaParaPrediccionDeVentas\obj\Debug\net6.0-windows\SistemaParaPrediccionDeVentas.csproj.CoreCompileInputs.cache
-C:\Users\Windows 10\Tareas\2023\segundo semestre\pg_2\CODIGO\SistemaParaPrediccionDeVentas\obj\Debug\net6.0-windows\SistemaParaPrediccionDeVentas.csproj.CopyComplete
 C:\Users\Windows 10\Tareas\2023\segundo semestre\pg_2\CODIGO\SistemaParaPrediccionDeVentas\obj\Debug\net6.0-windows\SistemaParaPrediccionDeVentas.dll
 C:\Users\Windows 10\Tareas\2023\segundo semestre\pg_2\CODIGO\SistemaParaPrediccionDeVentas\obj\Debug\net6.0-windows\refint\SistemaParaPrediccionDeVentas.dll
 C:\Users\Windows 10\Tareas\2023\segundo semestre\pg_2\CODIGO\SistemaParaPrediccionDeVentas\obj\Debug\net6.0-windows\SistemaParaPrediccionDeVentas.pdb
@@ -122,3 +121,5 @@ C:\Users\Windows 10\Tareas\2023\segundo semestre\pg_2\CODIGO\SistemaParaPredicci
 C:\Users\Windows 10\Tareas\2023\segundo semestre\pg_2\CODIGO\SistemaParaPrediccionDeVentas\bin\Debug\net6.0-windows\System.Numerics.Tensors.dll
 C:\Users\Windows 10\Tareas\2023\segundo semestre\pg_2\CODIGO\SistemaParaPrediccionDeVentas\bin\Debug\net6.0-windows\runtimes\win-arm64\native\LdaNative.dll
 C:\Users\Windows 10\Tareas\2023\segundo semestre\pg_2\CODIGO\SistemaParaPrediccionDeVentas\obj\Debug\net6.0-windows\SistemaParaPrediccionDeVentas.Vista.frmEntrenarModelo.resources
+C:\Users\Windows 10\Tareas\2023\segundo semestre\pg_2\CODIGO\SistemaParaPrediccionDeVentas\obj\Debug\net6.0-windows\SistemaParaPrediccionDeVentas.sourcelink.json
+C:\Users\Windows 10\Tareas\2023\segundo semestre\pg_2\CODIGO\SistemaParaPrediccionDeVentas\obj\Debug\net6.0-windows\SistemaP.11D0C893.Up2Date

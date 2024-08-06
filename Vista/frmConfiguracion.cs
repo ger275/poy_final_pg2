@@ -305,5 +305,11 @@ namespace SistemaParaPrediccionDeVentas.Vista
             MsgBoxController msgBox = new MsgBoxController();
             msgBox.Info(" ", "Ingrese una consulta que devuelta los campos código único del producto y el nombre del producto con los nombres codigo y nombre respectivamente (ej. select codigo_producto as codigo, nombre_producto as nombre from productos)");
         }
+
+        private void lblTitulo_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
     }
 }
