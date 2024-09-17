@@ -52,7 +52,7 @@
         "Type": "Trial",
         "TrainerName": "FastForestRegression",
         "Score": 0.0,
-        "RuntimeInSeconds": 1.691,
+        "RuntimeInSeconds": 1.708,
         "Parameter": {
           "_SCHEMA_": "e0 * e1 * e2 * e4",
           "e0": {
@@ -89,7 +89,7 @@
         "Type": "Trial",
         "TrainerName": "FastForestRegression",
         "Score": 0.0,
-        "RuntimeInSeconds": 0.725,
+        "RuntimeInSeconds": 0.666,
         "Parameter": {
           "_SCHEMA_": "e0 * e1 * e2 * e4",
           "e0": {
@@ -115,7 +115,7 @@
           "e4": {
             "NumberOfTrees": 9,
             "NumberOfLeaves": 4,
-            "FeatureFraction": 0.997028,
+            "FeatureFraction": 0.986983061,
             "LabelColumnName": "cantidad",
             "FeatureColumnName": "Features"
           }
@@ -126,7 +126,7 @@
         "Type": "Trial",
         "TrainerName": "FastTreeRegression",
         "Score": "NaN",
-        "RuntimeInSeconds": 0.762,
+        "RuntimeInSeconds": 0.705,
         "Parameter": {
           "_SCHEMA_": "e0 * e1 * e2 * e3",
           "e0": {

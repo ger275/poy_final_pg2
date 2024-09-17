@@ -13,6 +13,9 @@
     <Compile Update="Vista\frmConfiguracion.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Vista\frmCrecimientoMensual.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Vista\frmEntrenarModelo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -22,10 +25,16 @@
     <Compile Update="Vista\frmPredecir.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Vista\frmPredecirVentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Vista\frmReporteComparativo.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Vista\frmReportPrediccionActual.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Vista\frmRetornoSobreInversion.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Vista\MSGBOX\msgBoxError.cs">

@@ -38,7 +38,7 @@ namespace SistemaParaPrediccionDeVentas
             Button btn = (Button)sender;
             pMenu.Controls.Add(p);
             p.BackColor = Color.FromArgb(0, 191, 255);
-            p.Size = new Size(160, 5);
+            p.Size = new Size(btn.Size.Width, 5);
             p.Location = new Point(btn.Location.X, btn.Location.Y + 40);
         }
 
@@ -84,38 +84,35 @@ namespace SistemaParaPrediccionDeVentas
 
         private void btnPredecir_Click(object sender, EventArgs e)
         {
-            //abrirFormularioHijo(new Vista.frmPredecir());
+            frmPredecirVentas frm = new frmPredecirVentas();
+            abrirFormularioHijo(frm, frm.indice);
+
+            cerrarMenus();
         }
 
         private Form[] formularioActivo = null;
 
         private void abrirFormularioHijo(Form formularioHijo, int indice)
         {
-            if (formularioActivo != null)
-            {
-                //formularioActivo.Close();
-            }
-
             if (formularioActivo == null)
             {
                 formularioActivo = new Form[10];
             }
 
-            formularioActivo[indice] = formularioHijo;
-            formularioActivo[indice].TopLevel = false;
-            formularioActivo[indice].Location = new Point(((pFormulariosHijos.Width / 2) - (formularioHijo.Width / 2)), ((pFormulariosHijos.Height / 2) - (formularioHijo.Height / 2)));
-            pFormulariosHijos.Controls.Add(formularioActivo[indice]);
-            pFormulariosHijos.Tag = formularioActivo[indice];
-            formularioActivo[indice].BringToFront();
-            formularioActivo[indice].Show();
-
-            /*formularioActivo = formularioHijo;
-            formularioHijo.TopLevel = false;
-            formularioHijo.Location = new Point(((pFormulariosHijos.Width / 2) - (formularioHijo.Width / 2)), ((pFormulariosHijos.Height / 2) - (formularioHijo.Height / 2)));
-            pFormulariosHijos.Controls.Add(formularioHijo);
-            pFormulariosHijos.Tag = formularioHijo;
-            formularioHijo.BringToFront();
-            formularioHijo.Show();*/
+            if (formularioActivo[indice] == null || formularioActivo[indice].Visible == false)
+            {
+                formularioActivo[indice] = formularioHijo;
+                formularioActivo[indice].TopLevel = false;
+                formularioActivo[indice].Location = new Point(((pFormulariosHijos.Width / 2) - (formularioHijo.Width / 2)), ((pFormulariosHijos.Height / 2) - (formularioHijo.Height / 2)));
+                pFormulariosHijos.Controls.Add(formularioActivo[indice]);
+                pFormulariosHijos.Tag = formularioActivo[indice];
+                formularioActivo[indice].BringToFront();
+                formularioActivo[indice].Show();
+            }
+            else
+            {
+                formularioActivo[indice].Location = new Point(((pFormulariosHijos.Width / 2) - (formularioHijo.Width / 2)), ((pFormulariosHijos.Height / 2) - (formularioHijo.Height / 2)));
+            }
         }
 
         private void btnPrediccionActual_Click(object sender, EventArgs e)
@@ -130,7 +127,10 @@ namespace SistemaParaPrediccionDeVentas
 
         private void btnGraficas_Click(object sender, EventArgs e)
         {
-            //abrirFormularioHijo(new Vista.frmGraficas());
+            frmCrecimientoMensual frm = new frmCrecimientoMensual();
+            abrirFormularioHijo(frm, frm.indice);
+
+            cerrarMenus();
         }
 
         private void btnConfiguracion_Click(object sender, EventArgs e)
@@ -178,6 +178,14 @@ namespace SistemaParaPrediccionDeVentas
         private void pMenu_Click(object sender, EventArgs e)
         {
             //no entra a este metodo, entra al de panel mousedown
+        }
+
+        private void btnRetornoInversion_Click(object sender, EventArgs e)
+        {
+            frmRetornoSobreInversion frm = new frmRetornoSobreInversion();
+            abrirFormularioHijo(frm, frm.indice);
+
+            cerrarMenus();
         }
     }
 }

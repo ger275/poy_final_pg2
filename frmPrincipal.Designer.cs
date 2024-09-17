@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPrincipal));
             pMenu = new Panel();
+            btnRetornoInversion = new Button();
             btnConfiguracion = new Button();
             btnRestaurar = new Button();
             btnMinimizar = new Button();
@@ -65,6 +66,7 @@
             // pMenu
             // 
             pMenu.BackColor = Color.FromArgb(51, 62, 80);
+            pMenu.Controls.Add(btnRetornoInversion);
             pMenu.Controls.Add(btnConfiguracion);
             pMenu.Controls.Add(btnRestaurar);
             pMenu.Controls.Add(btnMinimizar);
@@ -81,17 +83,35 @@
             pMenu.Click += pMenu_Click;
             pMenu.MouseDown += panel1_MouseDown;
             // 
+            // btnRetornoInversion
+            // 
+            btnRetornoInversion.FlatAppearance.BorderSize = 0;
+            btnRetornoInversion.FlatAppearance.MouseDownBackColor = Color.FromArgb(74, 87, 108);
+            btnRetornoInversion.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            btnRetornoInversion.FlatStyle = FlatStyle.Flat;
+            btnRetornoInversion.Font = new Font("Lato", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            btnRetornoInversion.ForeColor = Color.Gainsboro;
+            btnRetornoInversion.Location = new Point(343, 7);
+            btnRetornoInversion.Name = "btnRetornoInversion";
+            btnRetornoInversion.Size = new Size(248, 38);
+            btnRetornoInversion.TabIndex = 13;
+            btnRetornoInversion.Text = "Retorno Sobre la Inversión";
+            btnRetornoInversion.UseVisualStyleBackColor = true;
+            btnRetornoInversion.Click += btnRetornoInversion_Click;
+            btnRetornoInversion.MouseEnter += btnMouseEnter;
+            btnRetornoInversion.MouseLeave += btnMouseLeave;
+            // 
             // btnConfiguracion
             // 
             btnConfiguracion.FlatAppearance.BorderSize = 0;
             btnConfiguracion.FlatAppearance.MouseDownBackColor = Color.FromArgb(74, 87, 108);
             btnConfiguracion.FlatAppearance.MouseOverBackColor = Color.Transparent;
             btnConfiguracion.FlatStyle = FlatStyle.Flat;
-            btnConfiguracion.Font = new Font("Lato", 15.7499981F, FontStyle.Bold, GraphicsUnit.Point);
+            btnConfiguracion.Font = new Font("Lato", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
             btnConfiguracion.ForeColor = Color.Gainsboro;
-            btnConfiguracion.Location = new Point(504, 7);
+            btnConfiguracion.Location = new Point(597, 7);
             btnConfiguracion.Name = "btnConfiguracion";
-            btnConfiguracion.Size = new Size(160, 40);
+            btnConfiguracion.Size = new Size(141, 38);
             btnConfiguracion.TabIndex = 12;
             btnConfiguracion.Text = "Configuración";
             btnConfiguracion.UseVisualStyleBackColor = true;
@@ -144,13 +164,13 @@
             btnGraficas.FlatAppearance.MouseDownBackColor = Color.FromArgb(74, 87, 108);
             btnGraficas.FlatAppearance.MouseOverBackColor = Color.Transparent;
             btnGraficas.FlatStyle = FlatStyle.Flat;
-            btnGraficas.Font = new Font("Lato", 15.7499981F, FontStyle.Bold, GraphicsUnit.Point);
+            btnGraficas.Font = new Font("Lato", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
             btnGraficas.ForeColor = Color.Gainsboro;
-            btnGraficas.Location = new Point(338, 7);
+            btnGraficas.Location = new Point(126, 7);
             btnGraficas.Name = "btnGraficas";
-            btnGraficas.Size = new Size(160, 40);
+            btnGraficas.Size = new Size(211, 38);
             btnGraficas.TabIndex = 7;
-            btnGraficas.Text = "Gráficas";
+            btnGraficas.Text = "Crecimiento Mensual";
             btnGraficas.UseVisualStyleBackColor = true;
             btnGraficas.Click += btnGraficas_Click;
             btnGraficas.MouseEnter += btnMouseEnter;
@@ -166,12 +186,13 @@
             btnReportes.ForeColor = Color.Gainsboro;
             btnReportes.Image = (Image)resources.GetObject("btnReportes.Image");
             btnReportes.ImageAlign = ContentAlignment.MiddleRight;
-            btnReportes.Location = new Point(172, 7);
+            btnReportes.Location = new Point(901, 7);
             btnReportes.Name = "btnReportes";
-            btnReportes.Size = new Size(160, 40);
+            btnReportes.Size = new Size(67, 40);
             btnReportes.TabIndex = 6;
             btnReportes.Text = "Reportes ";
             btnReportes.UseVisualStyleBackColor = true;
+            btnReportes.Visible = false;
             btnReportes.Click += btnReportes_Click;
             btnReportes.MouseEnter += btnMouseEnter;
             btnReportes.MouseLeave += btnMouseLeave;
@@ -182,13 +203,13 @@
             btnPredecir.FlatAppearance.MouseDownBackColor = Color.FromArgb(74, 87, 108);
             btnPredecir.FlatAppearance.MouseOverBackColor = Color.Transparent;
             btnPredecir.FlatStyle = FlatStyle.Flat;
-            btnPredecir.Font = new Font("Lato", 15.7499981F, FontStyle.Bold, GraphicsUnit.Point);
+            btnPredecir.Font = new Font("Lato", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
             btnPredecir.ForeColor = Color.Gainsboro;
-            btnPredecir.Location = new Point(6, 7);
+            btnPredecir.Location = new Point(10, 7);
             btnPredecir.Name = "btnPredecir";
-            btnPredecir.Size = new Size(160, 40);
+            btnPredecir.Size = new Size(110, 38);
             btnPredecir.TabIndex = 5;
-            btnPredecir.Text = "Predecir";
+            btnPredecir.Text = "Ventas";
             btnPredecir.UseVisualStyleBackColor = true;
             btnPredecir.Click += btnPredecir_Click;
             btnPredecir.MouseEnter += btnMouseEnter;
@@ -259,9 +280,9 @@
             pConfiguracion.Controls.Add(panel1);
             pConfiguracion.Controls.Add(btnEntrenarModelo);
             pConfiguracion.Controls.Add(btnConfigServidor);
-            pConfiguracion.Location = new Point(498, 0);
+            pConfiguracion.Location = new Point(591, 0);
             pConfiguracion.Name = "pConfiguracion";
-            pConfiguracion.Size = new Size(200, 107);
+            pConfiguracion.Size = new Size(200, 90);
             pConfiguracion.TabIndex = 8;
             pConfiguracion.Visible = false;
             // 
@@ -269,7 +290,7 @@
             // 
             panel7.BackColor = Color.FromArgb(104, 116, 135);
             panel7.Dock = DockStyle.Bottom;
-            panel7.Location = new Point(1, 106);
+            panel7.Location = new Point(1, 89);
             panel7.Name = "panel7";
             panel7.Size = new Size(198, 1);
             panel7.TabIndex = 14;
@@ -280,7 +301,7 @@
             panel6.Dock = DockStyle.Left;
             panel6.Location = new Point(0, 0);
             panel6.Name = "panel6";
-            panel6.Size = new Size(1, 107);
+            panel6.Size = new Size(1, 90);
             panel6.TabIndex = 13;
             // 
             // panel5
@@ -289,14 +310,14 @@
             panel5.Dock = DockStyle.Right;
             panel5.Location = new Point(199, 0);
             panel5.Name = "panel5";
-            panel5.Size = new Size(1, 107);
+            panel5.Size = new Size(1, 90);
             panel5.TabIndex = 12;
             // 
             // panel1
             // 
             panel1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             panel1.BackColor = Color.FromArgb(104, 116, 135);
-            panel1.Location = new Point(7, 46);
+            panel1.Location = new Point(7, 40);
             panel1.Name = "panel1";
             panel1.Size = new Size(185, 1);
             panel1.TabIndex = 11;
@@ -306,11 +327,11 @@
             btnEntrenarModelo.FlatAppearance.BorderSize = 0;
             btnEntrenarModelo.FlatAppearance.MouseOverBackColor = Color.DeepSkyBlue;
             btnEntrenarModelo.FlatStyle = FlatStyle.Flat;
-            btnEntrenarModelo.Font = new Font("Lato", 15.7499981F, FontStyle.Bold, GraphicsUnit.Point);
+            btnEntrenarModelo.Font = new Font("Lato", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
             btnEntrenarModelo.ForeColor = Color.White;
-            btnEntrenarModelo.Location = new Point(0, 53);
+            btnEntrenarModelo.Location = new Point(0, 48);
             btnEntrenarModelo.Name = "btnEntrenarModelo";
-            btnEntrenarModelo.Size = new Size(200, 40);
+            btnEntrenarModelo.Size = new Size(200, 30);
             btnEntrenarModelo.TabIndex = 10;
             btnEntrenarModelo.Text = "  Entrenar modelo";
             btnEntrenarModelo.TextAlign = ContentAlignment.MiddleLeft;
@@ -322,11 +343,11 @@
             btnConfigServidor.FlatAppearance.BorderSize = 0;
             btnConfigServidor.FlatAppearance.MouseOverBackColor = Color.DeepSkyBlue;
             btnConfigServidor.FlatStyle = FlatStyle.Flat;
-            btnConfigServidor.Font = new Font("Lato", 15.7499981F, FontStyle.Bold, GraphicsUnit.Point);
+            btnConfigServidor.Font = new Font("Lato", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
             btnConfigServidor.ForeColor = Color.White;
-            btnConfigServidor.Location = new Point(0, 0);
+            btnConfigServidor.Location = new Point(0, 5);
             btnConfigServidor.Name = "btnConfigServidor";
-            btnConfigServidor.Size = new Size(200, 40);
+            btnConfigServidor.Size = new Size(200, 30);
             btnConfigServidor.TabIndex = 9;
             btnConfigServidor.Text = "  Servidor";
             btnConfigServidor.TextAlign = ContentAlignment.MiddleLeft;
@@ -350,9 +371,9 @@
             label1.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
             label1.Location = new Point(4, 583);
             label1.Name = "label1";
-            label1.Size = new Size(222, 17);
+            label1.Size = new Size(223, 17);
             label1.TabIndex = 6;
-            label1.Text = "Desarrollado por: Gerson López 2023";
+            label1.Text = "Desarrollado por: Gerson López 2024";
             // 
             // pReportes
             // 
@@ -360,7 +381,7 @@
             pReportes.Controls.Add(button6);
             pReportes.Controls.Add(btnComparativo);
             pReportes.Controls.Add(btnPrediccionActual);
-            pReportes.Location = new Point(166, 0);
+            pReportes.Location = new Point(903, 0);
             pReportes.Name = "pReportes";
             pReportes.Size = new Size(200, 243);
             pReportes.TabIndex = 5;
@@ -373,7 +394,7 @@
             button6.FlatStyle = FlatStyle.Flat;
             button6.Font = new Font("Lato", 15.7499981F, FontStyle.Bold, GraphicsUnit.Point);
             button6.ForeColor = Color.Gainsboro;
-            button6.Location = new Point(0, 183);
+            button6.Location = new Point(0, 192);
             button6.Name = "button6";
             button6.Size = new Size(200, 40);
             button6.TabIndex = 10;
@@ -387,7 +408,7 @@
             btnComparativo.FlatStyle = FlatStyle.Flat;
             btnComparativo.Font = new Font("Lato", 15.7499981F, FontStyle.Bold, GraphicsUnit.Point);
             btnComparativo.ForeColor = Color.Gainsboro;
-            btnComparativo.Location = new Point(0, 133);
+            btnComparativo.Location = new Point(0, 142);
             btnComparativo.Name = "btnComparativo";
             btnComparativo.Size = new Size(200, 40);
             btnComparativo.TabIndex = 9;
@@ -402,7 +423,7 @@
             btnPrediccionActual.FlatStyle = FlatStyle.Flat;
             btnPrediccionActual.Font = new Font("Lato", 15.7499981F, FontStyle.Bold, GraphicsUnit.Point);
             btnPrediccionActual.ForeColor = Color.Gainsboro;
-            btnPrediccionActual.Location = new Point(0, 87);
+            btnPrediccionActual.Location = new Point(0, 96);
             btnPrediccionActual.Name = "btnPrediccionActual";
             btnPrediccionActual.Size = new Size(200, 40);
             btnPrediccionActual.TabIndex = 8;
@@ -461,5 +482,6 @@
         private Panel panel5;
         private Panel panel7;
         private Panel panel6;
+        private Button btnRetornoInversion;
     }
 }

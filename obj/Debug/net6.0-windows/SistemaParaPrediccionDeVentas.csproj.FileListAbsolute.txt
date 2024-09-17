@@ -34,6 +34,7 @@ C:\Users\Windows 10\Tareas\2023\segundo semestre\pg_2\CODIGO\SistemaParaPredicci
 C:\Users\Windows 10\Tareas\2023\segundo semestre\pg_2\CODIGO\SistemaParaPrediccionDeVentas\bin\Debug\net6.0-windows\ScottPlot.WinForms.dll
 C:\Users\Windows 10\Tareas\2023\segundo semestre\pg_2\CODIGO\SistemaParaPrediccionDeVentas\bin\Debug\net6.0-windows\System.Diagnostics.DiagnosticSource.dll
 C:\Users\Windows 10\Tareas\2023\segundo semestre\pg_2\CODIGO\SistemaParaPrediccionDeVentas\bin\Debug\net6.0-windows\System.IO.Pipelines.dll
+C:\Users\Windows 10\Tareas\2023\segundo semestre\pg_2\CODIGO\SistemaParaPrediccionDeVentas\bin\Debug\net6.0-windows\System.Numerics.Tensors.dll
 C:\Users\Windows 10\Tareas\2023\segundo semestre\pg_2\CODIGO\SistemaParaPrediccionDeVentas\bin\Debug\net6.0-windows\System.Text.Encodings.Web.dll
 C:\Users\Windows 10\Tareas\2023\segundo semestre\pg_2\CODIGO\SistemaParaPrediccionDeVentas\bin\Debug\net6.0-windows\System.Text.Json.dll
 C:\Users\Windows 10\Tareas\2023\segundo semestre\pg_2\CODIGO\SistemaParaPrediccionDeVentas\bin\Debug\net6.0-windows\ZstdSharp.dll
@@ -81,6 +82,7 @@ C:\Users\Windows 10\Tareas\2023\segundo semestre\pg_2\CODIGO\SistemaParaPredicci
 C:\Users\Windows 10\Tareas\2023\segundo semestre\pg_2\CODIGO\SistemaParaPrediccionDeVentas\bin\Debug\net6.0-windows\runtimes\linux-x64\native\libLdaNative.so
 C:\Users\Windows 10\Tareas\2023\segundo semestre\pg_2\CODIGO\SistemaParaPrediccionDeVentas\bin\Debug\net6.0-windows\runtimes\osx-arm64\native\libLdaNative.dylib
 C:\Users\Windows 10\Tareas\2023\segundo semestre\pg_2\CODIGO\SistemaParaPrediccionDeVentas\bin\Debug\net6.0-windows\runtimes\osx-x64\native\libLdaNative.dylib
+C:\Users\Windows 10\Tareas\2023\segundo semestre\pg_2\CODIGO\SistemaParaPrediccionDeVentas\bin\Debug\net6.0-windows\runtimes\win-arm64\native\LdaNative.dll
 C:\Users\Windows 10\Tareas\2023\segundo semestre\pg_2\CODIGO\SistemaParaPrediccionDeVentas\bin\Debug\net6.0-windows\runtimes\win-x64\native\LdaNative.dll
 C:\Users\Windows 10\Tareas\2023\segundo semestre\pg_2\CODIGO\SistemaParaPrediccionDeVentas\bin\Debug\net6.0-windows\runtimes\win-x86\native\LdaNative.dll
 C:\Users\Windows 10\Tareas\2023\segundo semestre\pg_2\CODIGO\SistemaParaPrediccionDeVentas\bin\Debug\net6.0-windows\runtimes\linux-x64\native\libFastTreeNative.so
@@ -99,10 +101,14 @@ C:\Users\Windows 10\Tareas\2023\segundo semestre\pg_2\CODIGO\SistemaParaPredicci
 C:\Users\Windows 10\Tareas\2023\segundo semestre\pg_2\CODIGO\SistemaParaPrediccionDeVentas\obj\Debug\net6.0-windows\SistemaParaPrediccionDeVentas.frmPrincipal.resources
 C:\Users\Windows 10\Tareas\2023\segundo semestre\pg_2\CODIGO\SistemaParaPrediccionDeVentas\obj\Debug\net6.0-windows\SistemaParaPrediccionDeVentas.Properties.Resources.resources
 C:\Users\Windows 10\Tareas\2023\segundo semestre\pg_2\CODIGO\SistemaParaPrediccionDeVentas\obj\Debug\net6.0-windows\SistemaParaPrediccionDeVentas.Vista.frmConfiguracion.resources
+C:\Users\Windows 10\Tareas\2023\segundo semestre\pg_2\CODIGO\SistemaParaPrediccionDeVentas\obj\Debug\net6.0-windows\SistemaParaPrediccionDeVentas.Vista.frmCrecimientoMensual.resources
+C:\Users\Windows 10\Tareas\2023\segundo semestre\pg_2\CODIGO\SistemaParaPrediccionDeVentas\obj\Debug\net6.0-windows\SistemaParaPrediccionDeVentas.Vista.frmEntrenarModelo.resources
 C:\Users\Windows 10\Tareas\2023\segundo semestre\pg_2\CODIGO\SistemaParaPrediccionDeVentas\obj\Debug\net6.0-windows\SistemaParaPrediccionDeVentas.Vista.frmGraficas.resources
 C:\Users\Windows 10\Tareas\2023\segundo semestre\pg_2\CODIGO\SistemaParaPrediccionDeVentas\obj\Debug\net6.0-windows\SistemaParaPrediccionDeVentas.Vista.frmPredecir.resources
+C:\Users\Windows 10\Tareas\2023\segundo semestre\pg_2\CODIGO\SistemaParaPrediccionDeVentas\obj\Debug\net6.0-windows\SistemaParaPrediccionDeVentas.Vista.frmPredecirVentas.resources
 C:\Users\Windows 10\Tareas\2023\segundo semestre\pg_2\CODIGO\SistemaParaPrediccionDeVentas\obj\Debug\net6.0-windows\SistemaParaPrediccionDeVentas.Vista.frmReporteComparativo.resources
 C:\Users\Windows 10\Tareas\2023\segundo semestre\pg_2\CODIGO\SistemaParaPrediccionDeVentas\obj\Debug\net6.0-windows\SistemaParaPrediccionDeVentas.Vista.frmReportPrediccionActual.resources
+C:\Users\Windows 10\Tareas\2023\segundo semestre\pg_2\CODIGO\SistemaParaPrediccionDeVentas\obj\Debug\net6.0-windows\SistemaParaPrediccionDeVentas.Vista.frmRetornoSobreInversion.resources
 C:\Users\Windows 10\Tareas\2023\segundo semestre\pg_2\CODIGO\SistemaParaPrediccionDeVentas\obj\Debug\net6.0-windows\SistemaParaPrediccionDeVentas.Vista.MSGBOX.msgBoxError.resources
 C:\Users\Windows 10\Tareas\2023\segundo semestre\pg_2\CODIGO\SistemaParaPrediccionDeVentas\obj\Debug\net6.0-windows\SistemaParaPrediccionDeVentas.Vista.MSGBOX.msgBoxInfo.resources
 C:\Users\Windows 10\Tareas\2023\segundo semestre\pg_2\CODIGO\SistemaParaPrediccionDeVentas\obj\Debug\net6.0-windows\SistemaParaPrediccionDeVentas.Vista.MSGBOX.msgBoxPedirContrasena.resources
@@ -113,13 +119,10 @@ C:\Users\Windows 10\Tareas\2023\segundo semestre\pg_2\CODIGO\SistemaParaPredicci
 C:\Users\Windows 10\Tareas\2023\segundo semestre\pg_2\CODIGO\SistemaParaPrediccionDeVentas\obj\Debug\net6.0-windows\SistemaParaPrediccionDeVentas.AssemblyInfoInputs.cache
 C:\Users\Windows 10\Tareas\2023\segundo semestre\pg_2\CODIGO\SistemaParaPrediccionDeVentas\obj\Debug\net6.0-windows\SistemaParaPrediccionDeVentas.AssemblyInfo.cs
 C:\Users\Windows 10\Tareas\2023\segundo semestre\pg_2\CODIGO\SistemaParaPrediccionDeVentas\obj\Debug\net6.0-windows\SistemaParaPrediccionDeVentas.csproj.CoreCompileInputs.cache
+C:\Users\Windows 10\Tareas\2023\segundo semestre\pg_2\CODIGO\SistemaParaPrediccionDeVentas\obj\Debug\net6.0-windows\SistemaParaPrediccionDeVentas.sourcelink.json
+C:\Users\Windows 10\Tareas\2023\segundo semestre\pg_2\CODIGO\SistemaParaPrediccionDeVentas\obj\Debug\net6.0-windows\SistemaP.11D0C893.Up2Date
 C:\Users\Windows 10\Tareas\2023\segundo semestre\pg_2\CODIGO\SistemaParaPrediccionDeVentas\obj\Debug\net6.0-windows\SistemaParaPrediccionDeVentas.dll
 C:\Users\Windows 10\Tareas\2023\segundo semestre\pg_2\CODIGO\SistemaParaPrediccionDeVentas\obj\Debug\net6.0-windows\refint\SistemaParaPrediccionDeVentas.dll
 C:\Users\Windows 10\Tareas\2023\segundo semestre\pg_2\CODIGO\SistemaParaPrediccionDeVentas\obj\Debug\net6.0-windows\SistemaParaPrediccionDeVentas.pdb
 C:\Users\Windows 10\Tareas\2023\segundo semestre\pg_2\CODIGO\SistemaParaPrediccionDeVentas\obj\Debug\net6.0-windows\SistemaParaPrediccionDeVentas.genruntimeconfig.cache
 C:\Users\Windows 10\Tareas\2023\segundo semestre\pg_2\CODIGO\SistemaParaPrediccionDeVentas\obj\Debug\net6.0-windows\ref\SistemaParaPrediccionDeVentas.dll
-C:\Users\Windows 10\Tareas\2023\segundo semestre\pg_2\CODIGO\SistemaParaPrediccionDeVentas\bin\Debug\net6.0-windows\System.Numerics.Tensors.dll
-C:\Users\Windows 10\Tareas\2023\segundo semestre\pg_2\CODIGO\SistemaParaPrediccionDeVentas\bin\Debug\net6.0-windows\runtimes\win-arm64\native\LdaNative.dll
-C:\Users\Windows 10\Tareas\2023\segundo semestre\pg_2\CODIGO\SistemaParaPrediccionDeVentas\obj\Debug\net6.0-windows\SistemaParaPrediccionDeVentas.Vista.frmEntrenarModelo.resources
-C:\Users\Windows 10\Tareas\2023\segundo semestre\pg_2\CODIGO\SistemaParaPrediccionDeVentas\obj\Debug\net6.0-windows\SistemaParaPrediccionDeVentas.sourcelink.json
-C:\Users\Windows 10\Tareas\2023\segundo semestre\pg_2\CODIGO\SistemaParaPrediccionDeVentas\obj\Debug\net6.0-windows\SistemaP.11D0C893.Up2Date
