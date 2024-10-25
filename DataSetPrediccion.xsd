@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSetPrediccion" targetNamespace="http://tempuri.org/DataSetPrediccion.xsd" xmlns:mstns="http://tempuri.org/DataSetPrediccion.xsd" xmlns="http://tempuri.org/DataSetPrediccion.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSetPrediccion" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="DataSetPrediccion" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSetPrediccion">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DataTable1" msprop:Generator_RowClassName="DataTable1Row" msprop:Generator_RowEvHandlerName="DataTable1RowChangeEventHandler" msprop:Generator_RowDeletedName="DataTable1RowDeleted" msprop:Generator_RowDeletingName="DataTable1RowDeleting" msprop:Generator_RowEvArgName="DataTable1RowChangeEvent" msprop:Generator_TablePropName="DataTable1" msprop:Generator_RowChangedName="DataTable1RowChanged" msprop:Generator_UserTableName="DataTable1" msprop:Generator_RowChangingName="DataTable1RowChanging" msprop:Generator_TableClassName="DataTable1DataTable" msprop:Generator_TableVarName="tableDataTable1">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="codigo" msprop:Generator_UserColumnName="codigo" msprop:Generator_ColumnPropNameInTable="codigoColumn" msprop:Generator_ColumnPropNameInRow="codigo" msprop:Generator_ColumnVarNameInTable="columncodigo" type="xs:string" minOccurs="0" />
+              <xs:element name="producto" msprop:Generator_UserColumnName="producto" msprop:Generator_ColumnPropNameInTable="productoColumn" msprop:Generator_ColumnPropNameInRow="producto" msprop:Generator_ColumnVarNameInTable="columnproducto" type="xs:string" minOccurs="0" />
+              <xs:element name="mes1" msprop:Generator_UserColumnName="mes1" msprop:Generator_ColumnPropNameInTable="mes1Column" msprop:Generator_ColumnPropNameInRow="mes1" msprop:Generator_ColumnVarNameInTable="columnmes1" type="xs:string" minOccurs="0" />
+              <xs:element name="mes2" msprop:Generator_ColumnPropNameInRow="mes2" msprop:Generator_ColumnPropNameInTable="mes2Column" msprop:Generator_ColumnVarNameInTable="columnmes2" msprop:Generator_UserColumnName="mes2" type="xs:string" minOccurs="0" />
+              <xs:element name="mes3" msprop:Generator_ColumnPropNameInRow="mes3" msprop:Generator_ColumnPropNameInTable="mes3Column" msprop:Generator_ColumnVarNameInTable="columnmes3" msprop:Generator_UserColumnName="mes3" type="xs:string" minOccurs="0" />
+              <xs:element name="mes4" msprop:Generator_ColumnPropNameInRow="mes4" msprop:Generator_ColumnPropNameInTable="mes4Column" msprop:Generator_ColumnVarNameInTable="columnmes4" msprop:Generator_UserColumnName="mes4" type="xs:string" minOccurs="0" />
+              <xs:element name="mes5" msprop:Generator_ColumnPropNameInRow="mes5" msprop:Generator_ColumnPropNameInTable="mes5Column" msprop:Generator_ColumnVarNameInTable="columnmes5" msprop:Generator_UserColumnName="mes5" type="xs:string" minOccurs="0" />
+              <xs:element name="mes6" msprop:Generator_ColumnPropNameInRow="mes6" msprop:Generator_ColumnPropNameInTable="mes6Column" msprop:Generator_ColumnVarNameInTable="columnmes6" msprop:Generator_UserColumnName="mes6" type="xs:string" minOccurs="0" />
+              <xs:element name="mes7" msprop:Generator_ColumnPropNameInRow="mes7" msprop:Generator_ColumnPropNameInTable="mes7Column" msprop:Generator_ColumnVarNameInTable="columnmes7" msprop:Generator_UserColumnName="mes7" type="xs:string" minOccurs="0" />
+              <xs:element name="mes8" msprop:Generator_ColumnPropNameInRow="mes8" msprop:Generator_ColumnPropNameInTable="mes8Column" msprop:Generator_ColumnVarNameInTable="columnmes8" msprop:Generator_UserColumnName="mes8" type="xs:string" minOccurs="0" />
+              <xs:element name="mes9" msprop:Generator_ColumnPropNameInRow="mes9" msprop:Generator_ColumnPropNameInTable="mes9Column" msprop:Generator_ColumnVarNameInTable="columnmes9" msprop:Generator_UserColumnName="mes9" type="xs:string" minOccurs="0" />
+              <xs:element name="mes10" msprop:Generator_ColumnPropNameInRow="mes10" msprop:Generator_ColumnPropNameInTable="mes10Column" msprop:Generator_ColumnVarNameInTable="columnmes10" msprop:Generator_UserColumnName="mes10" type="xs:string" minOccurs="0" />
+              <xs:element name="mes11" msprop:Generator_ColumnPropNameInRow="mes11" msprop:Generator_ColumnPropNameInTable="mes11Column" msprop:Generator_ColumnVarNameInTable="columnmes11" msprop:Generator_UserColumnName="mes11" type="xs:string" minOccurs="0" />
+              <xs:element name="mes12" msprop:Generator_ColumnPropNameInRow="mes12" msprop:Generator_ColumnPropNameInTable="mes12Column" msprop:Generator_ColumnVarNameInTable="columnmes12" msprop:Generator_UserColumnName="mes12" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

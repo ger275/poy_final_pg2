@@ -3,32 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\Windows 10\\Tareas\\2023\\segundo semestre\\pg_2\\CODIGO\\SistemaParaPrediccionDeVentas\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D66FD6DD-3CC0-47DE-8447-A74115D23C3B}|SistemaParaPrediccionDeVentas.csproj|c:\\users\\windows 10\\tareas\\2023\\segundo semestre\\pg_2\\codigo\\sistemaparapredicciondeventas\\vista\\frmpredecirventas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{D66FD6DD-3CC0-47DE-8447-A74115D23C3B}|SistemaParaPrediccionDeVentas.csproj|solutionrelative:vista\\frmpredecirventas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D66FD6DD-3CC0-47DE-8447-A74115D23C3B}|SistemaParaPrediccionDeVentas.csproj|c:\\users\\windows 10\\tareas\\2023\\segundo semestre\\pg_2\\codigo\\sistemaparapredicciondeventas\\vista\\frmgraficas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D66FD6DD-3CC0-47DE-8447-A74115D23C3B}|SistemaParaPrediccionDeVentas.csproj|solutionrelative:vista\\frmgraficas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D66FD6DD-3CC0-47DE-8447-A74115D23C3B}|SistemaParaPrediccionDeVentas.csproj|C:\\Users\\Windows 10\\Tareas\\2023\\segundo semestre\\pg_2\\CODIGO\\SistemaParaPrediccionDeVentas\\vista\\frmgraficas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{D66FD6DD-3CC0-47DE-8447-A74115D23C3B}|SistemaParaPrediccionDeVentas.csproj|solutionrelative:vista\\frmgraficas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{D66FD6DD-3CC0-47DE-8447-A74115D23C3B}|SistemaParaPrediccionDeVentas.csproj|c:\\users\\windows 10\\tareas\\2023\\segundo semestre\\pg_2\\codigo\\sistemaparapredicciondeventas\\vista\\frmpredecirventas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D66FD6DD-3CC0-47DE-8447-A74115D23C3B}|SistemaParaPrediccionDeVentas.csproj|solutionrelative:vista\\frmpredecirventas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D66FD6DD-3CC0-47DE-8447-A74115D23C3B}|SistemaParaPrediccionDeVentas.csproj|c:\\users\\windows 10\\tareas\\2023\\segundo semestre\\pg_2\\codigo\\sistemaparapredicciondeventas\\vista\\frmpredecir.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D66FD6DD-3CC0-47DE-8447-A74115D23C3B}|SistemaParaPrediccionDeVentas.csproj|solutionrelative:vista\\frmpredecir.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D66FD6DD-3CC0-47DE-8447-A74115D23C3B}|SistemaParaPrediccionDeVentas.csproj|C:\\Users\\Windows 10\\Tareas\\2023\\segundo semestre\\pg_2\\CODIGO\\SistemaParaPrediccionDeVentas\\vista\\frmpredecir.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{D66FD6DD-3CC0-47DE-8447-A74115D23C3B}|SistemaParaPrediccionDeVentas.csproj|solutionrelative:vista\\frmpredecir.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{D66FD6DD-3CC0-47DE-8447-A74115D23C3B}|SistemaParaPrediccionDeVentas.csproj|c:\\users\\windows 10\\tareas\\2023\\segundo semestre\\pg_2\\codigo\\sistemaparapredicciondeventas\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D66FD6DD-3CC0-47DE-8447-A74115D23C3B}|SistemaParaPrediccionDeVentas.csproj|solutionrelative:frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D66FD6DD-3CC0-47DE-8447-A74115D23C3B}|SistemaParaPrediccionDeVentas.csproj|c:\\users\\windows 10\\tareas\\2023\\segundo semestre\\pg_2\\codigo\\sistemaparapredicciondeventas\\controlador\\bdcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D66FD6DD-3CC0-47DE-8447-A74115D23C3B}|SistemaParaPrediccionDeVentas.csproj|solutionrelative:controlador\\bdcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D66FD6DD-3CC0-47DE-8447-A74115D23C3B}|SistemaParaPrediccionDeVentas.csproj|C:\\Users\\Windows 10\\Tareas\\2023\\segundo semestre\\pg_2\\CODIGO\\SistemaParaPrediccionDeVentas\\vista\\frmpredecirventas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D66FD6DD-3CC0-47DE-8447-A74115D23C3B}|SistemaParaPrediccionDeVentas.csproj|solutionrelative:vista\\frmpredecirventas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D66FD6DD-3CC0-47DE-8447-A74115D23C3B}|SistemaParaPrediccionDeVentas.csproj|c:\\users\\windows 10\\tareas\\2023\\segundo semestre\\pg_2\\codigo\\sistemaparapredicciondeventas\\vista\\frmreporteprediccion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D66FD6DD-3CC0-47DE-8447-A74115D23C3B}|SistemaParaPrediccionDeVentas.csproj|solutionrelative:vista\\frmreporteprediccion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,92 +30,70 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "frmGraficas.cs",
-              "DocumentMoniker": "C:\\Users\\Windows 10\\Tareas\\2023\\segundo semestre\\pg_2\\CODIGO\\SistemaParaPrediccionDeVentas\\Vista\\frmGraficas.cs",
-              "RelativeDocumentMoniker": "Vista\\frmGraficas.cs",
-              "ToolTip": "C:\\Users\\Windows 10\\Tareas\\2023\\segundo semestre\\pg_2\\CODIGO\\SistemaParaPrediccionDeVentas\\Vista\\frmGraficas.cs",
-              "RelativeToolTip": "Vista\\frmGraficas.cs",
-              "ViewState": "AQIAABQAAAAAAAAAAAAQwDEAAAAtAAAA",
+              "Title": "frmLogin.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Windows 10\\Tareas\\2023\\segundo semestre\\pg_2\\CODIGO\\SistemaParaPrediccionDeVentas\\frmLogin.cs",
+              "RelativeDocumentMoniker": "frmLogin.cs",
+              "ToolTip": "C:\\Users\\Windows 10\\Tareas\\2023\\segundo semestre\\pg_2\\CODIGO\\SistemaParaPrediccionDeVentas\\frmLogin.cs [Dise\u00F1o]",
+              "RelativeToolTip": "frmLogin.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-14T21:22:43.578Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-25T21:32:27.631Z",
+              "EditorCaption": " [Dise\u00F1o]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "frmPredecir.cs",
-              "DocumentMoniker": "C:\\Users\\Windows 10\\Tareas\\2023\\segundo semestre\\pg_2\\CODIGO\\SistemaParaPrediccionDeVentas\\Vista\\frmPredecir.cs",
-              "RelativeDocumentMoniker": "Vista\\frmPredecir.cs",
-              "ToolTip": "C:\\Users\\Windows 10\\Tareas\\2023\\segundo semestre\\pg_2\\CODIGO\\SistemaParaPrediccionDeVentas\\Vista\\frmPredecir.cs",
-              "RelativeToolTip": "Vista\\frmPredecir.cs",
-              "ViewState": "AQIAAHQAAAAAAAAAAAAuwGEAAAAMAAAA",
+              "Title": "frmReportePrediccion.cs",
+              "DocumentMoniker": "C:\\Users\\Windows 10\\Tareas\\2023\\segundo semestre\\pg_2\\CODIGO\\SistemaParaPrediccionDeVentas\\Vista\\frmReportePrediccion.cs",
+              "RelativeDocumentMoniker": "Vista\\frmReportePrediccion.cs",
+              "ToolTip": "C:\\Users\\Windows 10\\Tareas\\2023\\segundo semestre\\pg_2\\CODIGO\\SistemaParaPrediccionDeVentas\\Vista\\frmReportePrediccion.cs",
+              "RelativeToolTip": "Vista\\frmReportePrediccion.cs",
+              "ViewState": "AQIAAEUAAAAAAAAAAAAowGsAAAARAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-14T18:12:11.899Z",
+              "WhenOpened": "2024-10-23T16:55:50.49Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "frmPredecir.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\Windows 10\\Tareas\\2023\\segundo semestre\\pg_2\\CODIGO\\SistemaParaPrediccionDeVentas\\Vista\\frmPredecir.cs",
-              "RelativeDocumentMoniker": "Vista\\frmPredecir.cs",
-              "ToolTip": "C:\\Users\\Windows 10\\Tareas\\2023\\segundo semestre\\pg_2\\CODIGO\\SistemaParaPrediccionDeVentas\\Vista\\frmPredecir.cs [Dise\u00F1o]",
-              "RelativeToolTip": "Vista\\frmPredecir.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-14T18:12:07.894Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "frmPredecirVentas.cs",
-              "DocumentMoniker": "C:\\Users\\Windows 10\\Tareas\\2023\\segundo semestre\\pg_2\\CODIGO\\SistemaParaPrediccionDeVentas\\Vista\\frmPredecirVentas.cs",
-              "RelativeDocumentMoniker": "Vista\\frmPredecirVentas.cs",
-              "ToolTip": "C:\\Users\\Windows 10\\Tareas\\2023\\segundo semestre\\pg_2\\CODIGO\\SistemaParaPrediccionDeVentas\\Vista\\frmPredecirVentas.cs",
-              "RelativeToolTip": "Vista\\frmPredecirVentas.cs",
-              "ViewState": "AQIAAM0AAAAAAAAAAAAmwOoAAABtAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-25T06:06:50.305Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
               "Title": "frmPredecirVentas.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\Windows 10\\Tareas\\2023\\segundo semestre\\pg_2\\CODIGO\\SistemaParaPrediccionDeVentas\\Vista\\frmPredecirVentas.cs",
               "RelativeDocumentMoniker": "Vista\\frmPredecirVentas.cs",
               "ToolTip": "C:\\Users\\Windows 10\\Tareas\\2023\\segundo semestre\\pg_2\\CODIGO\\SistemaParaPrediccionDeVentas\\Vista\\frmPredecirVentas.cs [Dise\u00F1o]",
               "RelativeToolTip": "Vista\\frmPredecirVentas.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-13T02:53:42.534Z",
+              "WhenOpened": "2024-10-22T17:37:00.485Z",
               "EditorCaption": " [Dise\u00F1o]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "frmGraficas.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\Windows 10\\Tareas\\2023\\segundo semestre\\pg_2\\CODIGO\\SistemaParaPrediccionDeVentas\\Vista\\frmGraficas.cs",
-              "RelativeDocumentMoniker": "Vista\\frmGraficas.cs",
-              "ToolTip": "C:\\Users\\Windows 10\\Tareas\\2023\\segundo semestre\\pg_2\\CODIGO\\SistemaParaPrediccionDeVentas\\Vista\\frmGraficas.cs [Dise\u00F1o]",
-              "RelativeToolTip": "Vista\\frmGraficas.cs [Dise\u00F1o]",
+              "DocumentIndex": 0,
+              "Title": "frmPredecirVentas.cs",
+              "DocumentMoniker": "C:\\Users\\Windows 10\\Tareas\\2023\\segundo semestre\\pg_2\\CODIGO\\SistemaParaPrediccionDeVentas\\Vista\\frmPredecirVentas.cs",
+              "RelativeDocumentMoniker": "Vista\\frmPredecirVentas.cs",
+              "ToolTip": "C:\\Users\\Windows 10\\Tareas\\2023\\segundo semestre\\pg_2\\CODIGO\\SistemaParaPrediccionDeVentas\\Vista\\frmPredecirVentas.cs",
+              "RelativeToolTip": "Vista\\frmPredecirVentas.cs",
+              "ViewState": "AQIAAHoAAAAAAAAAAAAkwJQAAAAsAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-07T05:12:43.04Z"
+              "WhenOpened": "2024-10-20T00:19:02.646Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 2,
               "Title": "BDController.cs",
               "DocumentMoniker": "C:\\Users\\Windows 10\\Tareas\\2023\\segundo semestre\\pg_2\\CODIGO\\SistemaParaPrediccionDeVentas\\Controlador\\BDController.cs",
               "RelativeDocumentMoniker": "Controlador\\BDController.cs",
               "ToolTip": "C:\\Users\\Windows 10\\Tareas\\2023\\segundo semestre\\pg_2\\CODIGO\\SistemaParaPrediccionDeVentas\\Controlador\\BDController.cs",
               "RelativeToolTip": "Controlador\\BDController.cs",
-              "ViewState": "AQIAAIAAAAAAAAAAAAAUwHcAAABBAAAA",
+              "ViewState": "AQIAABYAAAAAAAAAAAAAwCkAAAA4AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-23T02:35:59.086Z"
+              "WhenOpened": "2024-10-17T20:46:55.27Z",
+              "EditorCaption": ""
             }
           ]
         }

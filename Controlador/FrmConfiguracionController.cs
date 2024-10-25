@@ -54,7 +54,7 @@ namespace SistemaParaPrediccionDeVentas.Controlador
             return true;
         }
 
-        public bool GuardarConfiguracionSQLServer(string host, string puerto, string usuario, string contrasena, string baseDeDatos)
+        public bool GuardarConfiguracionSQLServer(string host, string puerto, string usuario, string contrasena, string baseDeDatos, string consultaProductos, string consultaPedidos)
         {
             AES aES = new AES();
             string nombreArchivo = "ConfigBDSQLServer.txt";
@@ -74,6 +74,8 @@ namespace SistemaParaPrediccionDeVentas.Controlador
                 sw.WriteLine(aES.EncriptarDato("usuario") + " ::: " + usuario);
                 sw.WriteLine(aES.EncriptarDato("contrasena") + " ::: " + contrasena);
                 sw.WriteLine(aES.EncriptarDato("baseDeDatos") + " ::: " + baseDeDatos);
+                sw.WriteLine(aES.EncriptarDato("productos") + " ::: " + consultaProductos);
+                sw.WriteLine(aES.EncriptarDato("pedidos") + " ::: " + consultaPedidos);
                 sw.Close();
             }
 

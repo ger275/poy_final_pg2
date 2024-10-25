@@ -58,6 +58,10 @@
               "target": "Package",
               "version": "[3.0.1, )"
             },
+            "Microsoft.Windows.Compatibility": {
+              "target": "Package",
+              "version": "[8.0.10, )"
+            },
             "MySql.Data": {
               "target": "Package",
               "version": "[8.4.0, )"
@@ -68,7 +72,7 @@
             },
             "ReportViewerCore.WinForms": {
               "target": "Package",
-              "version": "[15.1.18, )"
+              "version": "[15.1.22, )"
             },
             "ScottPlot.WinForms": {
               "target": "Package",

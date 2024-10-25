@@ -207,7 +207,7 @@ namespace SistemaParaPrediccionDeVentas.Vista
             }
             else if (cmbServidor.SelectedIndex == 1)
             {
-                if (ctrler.GuardarConfiguracionSQLServer(aes.EncriptarDato(txtHost.Text), aes.EncriptarDato(txtPuerto.Text), aes.EncriptarDato(txtUsuario.Text), aes.EncriptarDato(txtContrasena.Text), aes.EncriptarDato(txtBaseDeDatos.Text)))
+                if (ctrler.GuardarConfiguracionSQLServer(aes.EncriptarDato(txtHost.Text), aes.EncriptarDato(txtPuerto.Text), aes.EncriptarDato(txtUsuario.Text), aes.EncriptarDato(txtContrasena.Text), aes.EncriptarDato(txtBaseDeDatos.Text), aes.EncriptarDato(txtConsultaProductos.Text), aes.EncriptarDato(txtConsultaVentas.Text)))
                 {
                     msgBox.Info("Atención", "Se guardaron los datos.");
                 }
@@ -292,6 +292,8 @@ namespace SistemaParaPrediccionDeVentas.Vista
                 msgFrm.Close();
                 msgBox.Errorr("Atención", con.mensajeErrorConexion);
             }
+
+            con.Desconectar();
         }
 
         private void btnHelp_Click(object sender, EventArgs e)
@@ -310,6 +312,19 @@ namespace SistemaParaPrediccionDeVentas.Vista
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void cmbServidor_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cmbServidor.SelectedIndex == 1)
+            {
+                txtPuerto.Text = "1433";
+                txtPuerto.Enabled = false;
+            }
+            else
+            {
+                txtPuerto.Enabled = true;
+            }
         }
     }
 }

@@ -92,7 +92,7 @@ namespace SistemaParaPrediccionDeVentas
 
         private Form[] formularioActivo = null;
 
-        private void abrirFormularioHijo(Form formularioHijo, int indice)
+        public void abrirFormularioHijo(Form formularioHijo, int indice)
         {
             if (formularioActivo == null)
             {
@@ -112,6 +112,7 @@ namespace SistemaParaPrediccionDeVentas
             else
             {
                 formularioActivo[indice].Location = new Point(((pFormulariosHijos.Width / 2) - (formularioHijo.Width / 2)), ((pFormulariosHijos.Height / 2) - (formularioHijo.Height / 2)));
+                formularioActivo[indice].BringToFront();
             }
         }
 
@@ -156,7 +157,7 @@ namespace SistemaParaPrediccionDeVentas
 
         private void btnEntrenarModelo_Click(object sender, EventArgs e)
         {
-            frmEntrenarModelo frm = new frmEntrenarModelo();
+            frmConfiguracionUsuario frm = new frmConfiguracionUsuario();
             abrirFormularioHijo(frm, frm.indice);
 
             cerrarMenus();

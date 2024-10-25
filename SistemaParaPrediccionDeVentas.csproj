@@ -8,10 +8,12 @@
   </PropertyGroup>
   <ItemGroup>
     <None Remove="Vista\Reportes\ReporteComparativo.rdlc" />
+    <None Remove="Vista\Reportes\ReportePrediccion.rdlc" />
     <None Remove="Vista\Reportes\ReportePrediccionActual.rdlc" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Vista\Reportes\ReporteComparativo.rdlc" />
+    <EmbeddedResource Include="Vista\Reportes\ReportePrediccion.rdlc" />
     <EmbeddedResource Include="Vista\Reportes\ReportePrediccionActual.rdlc">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </EmbeddedResource>
@@ -19,9 +21,10 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.ML" Version="3.0.1" />
     <PackageReference Include="Microsoft.ML.FastTree" Version="3.0.1" />
+    <PackageReference Include="Microsoft.Windows.Compatibility" Version="8.0.10" />
     <PackageReference Include="MySql.Data" Version="8.4.0" />
     <PackageReference Include="Plotly.NET" Version="3.0.1" />
-    <PackageReference Include="ReportViewerCore.WinForms" Version="15.1.18" />
+    <PackageReference Include="ReportViewerCore.WinForms" Version="15.1.22" />
     <PackageReference Include="ScottPlot.WinForms" Version="4.1.67" />
   </ItemGroup>
   <ItemGroup>
@@ -34,6 +37,11 @@
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
       <DependentUpon>DataSetComparativo.xsd</DependentUpon>
+    </Compile>
+    <Compile Update="DataSetPrediccion.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>DataSetPrediccion.xsd</DependentUpon>
     </Compile>
     <Compile Update="DataSetPrediccionActual.Designer.cs">
       <DesignTime>True</DesignTime>
@@ -56,6 +64,10 @@
     <None Update="DataSetComparativo.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>DataSetComparativo.Designer.cs</LastGenOutput>
+    </None>
+    <None Update="DataSetPrediccion.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetPrediccion.Designer.cs</LastGenOutput>
     </None>
     <None Update="DataSetPrediccionActual.xsd">
       <Generator>MSDataSetGenerator</Generator>

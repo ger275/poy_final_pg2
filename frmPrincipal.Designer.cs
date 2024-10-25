@@ -91,12 +91,13 @@
             btnRetornoInversion.FlatStyle = FlatStyle.Flat;
             btnRetornoInversion.Font = new Font("Lato", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
             btnRetornoInversion.ForeColor = Color.Gainsboro;
-            btnRetornoInversion.Location = new Point(343, 7);
+            btnRetornoInversion.Location = new Point(684, 7);
             btnRetornoInversion.Name = "btnRetornoInversion";
             btnRetornoInversion.Size = new Size(248, 38);
             btnRetornoInversion.TabIndex = 13;
             btnRetornoInversion.Text = "Retorno Sobre la Inversión";
             btnRetornoInversion.UseVisualStyleBackColor = true;
+            btnRetornoInversion.Visible = false;
             btnRetornoInversion.Click += btnRetornoInversion_Click;
             btnRetornoInversion.MouseEnter += btnMouseEnter;
             btnRetornoInversion.MouseLeave += btnMouseLeave;
@@ -109,7 +110,7 @@
             btnConfiguracion.FlatStyle = FlatStyle.Flat;
             btnConfiguracion.Font = new Font("Lato", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
             btnConfiguracion.ForeColor = Color.Gainsboro;
-            btnConfiguracion.Location = new Point(597, 7);
+            btnConfiguracion.Location = new Point(126, 7);
             btnConfiguracion.Name = "btnConfiguracion";
             btnConfiguracion.Size = new Size(141, 38);
             btnConfiguracion.TabIndex = 12;
@@ -166,12 +167,13 @@
             btnGraficas.FlatStyle = FlatStyle.Flat;
             btnGraficas.Font = new Font("Lato", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
             btnGraficas.ForeColor = Color.Gainsboro;
-            btnGraficas.Location = new Point(126, 7);
+            btnGraficas.Location = new Point(467, 7);
             btnGraficas.Name = "btnGraficas";
             btnGraficas.Size = new Size(211, 38);
             btnGraficas.TabIndex = 7;
             btnGraficas.Text = "Crecimiento Mensual";
             btnGraficas.UseVisualStyleBackColor = true;
+            btnGraficas.Visible = false;
             btnGraficas.Click += btnGraficas_Click;
             btnGraficas.MouseEnter += btnMouseEnter;
             btnGraficas.MouseLeave += btnMouseLeave;
@@ -280,7 +282,7 @@
             pConfiguracion.Controls.Add(panel1);
             pConfiguracion.Controls.Add(btnEntrenarModelo);
             pConfiguracion.Controls.Add(btnConfigServidor);
-            pConfiguracion.Location = new Point(591, 0);
+            pConfiguracion.Location = new Point(120, 0);
             pConfiguracion.Name = "pConfiguracion";
             pConfiguracion.Size = new Size(200, 90);
             pConfiguracion.TabIndex = 8;
@@ -333,7 +335,7 @@
             btnEntrenarModelo.Name = "btnEntrenarModelo";
             btnEntrenarModelo.Size = new Size(200, 30);
             btnEntrenarModelo.TabIndex = 10;
-            btnEntrenarModelo.Text = "  Entrenar modelo";
+            btnEntrenarModelo.Text = "  Configurar Usuario";
             btnEntrenarModelo.TextAlign = ContentAlignment.MiddleLeft;
             btnEntrenarModelo.UseVisualStyleBackColor = true;
             btnEntrenarModelo.Click += btnEntrenarModelo_Click;

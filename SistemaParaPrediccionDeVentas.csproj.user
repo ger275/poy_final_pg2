@@ -13,6 +13,9 @@
     <Compile Update="Vista\frmConfiguracion.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Vista\frmConfiguracionUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Vista\frmCrecimientoMensual.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -29,6 +32,9 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Vista\frmReporteComparativo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Vista\frmReportePrediccion.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Vista\frmReportPrediccionActual.cs">
@@ -55,6 +61,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Update="DataSetComparativo.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="DataSetPrediccion.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Update="DataSetPrediccionActual.xsd">

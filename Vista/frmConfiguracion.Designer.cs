@@ -136,7 +136,7 @@
             // 
             // lblTitulo
             // 
-            lblTitulo.Font = new Font("Lato", 23.9999962F, FontStyle.Bold, GraphicsUnit.Point);
+            lblTitulo.Font = new Font("Lato", 23.9999962F, FontStyle.Bold);
             lblTitulo.ForeColor = Color.Gainsboro;
             lblTitulo.Image = (Image)resources.GetObject("lblTitulo.Image");
             lblTitulo.ImageAlign = ContentAlignment.MiddleLeft;
@@ -265,7 +265,7 @@
             // 
             // txtHost
             // 
-            txtHost.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            txtHost.Font = new Font("Segoe UI", 11.25F);
             txtHost.Location = new Point(129, 100);
             txtHost.MaxLength = 200;
             txtHost.Multiline = true;
@@ -276,7 +276,7 @@
             // 
             // txtUsuario
             // 
-            txtUsuario.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            txtUsuario.Font = new Font("Segoe UI", 11.25F);
             txtUsuario.Location = new Point(129, 168);
             txtUsuario.Multiline = true;
             txtUsuario.Name = "txtUsuario";
@@ -286,7 +286,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            label2.Font = new Font("Segoe UI", 11.25F);
             label2.Location = new Point(83, 100);
             label2.Name = "label2";
             label2.Size = new Size(40, 20);
@@ -296,7 +296,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            label3.Font = new Font("Segoe UI", 11.25F);
             label3.Location = new Point(40, 202);
             label3.Name = "label3";
             label3.Size = new Size(83, 20);
@@ -305,7 +305,7 @@
             // 
             // txtContrasena
             // 
-            txtContrasena.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            txtContrasena.Font = new Font("Segoe UI", 11.25F);
             txtContrasena.Location = new Point(129, 202);
             txtContrasena.Multiline = true;
             txtContrasena.Name = "txtContrasena";
@@ -316,7 +316,7 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            label4.Font = new Font("Segoe UI", 11.25F);
             label4.Location = new Point(64, 168);
             label4.Name = "label4";
             label4.Size = new Size(59, 20);
@@ -326,17 +326,18 @@
             // cmbServidor
             // 
             cmbServidor.DropDownStyle = ComboBoxStyle.DropDownList;
-            cmbServidor.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            cmbServidor.Font = new Font("Segoe UI", 11.25F);
             cmbServidor.FormattingEnabled = true;
             cmbServidor.Location = new Point(129, 66);
             cmbServidor.Name = "cmbServidor";
             cmbServidor.Size = new Size(220, 28);
             cmbServidor.TabIndex = 13;
+            cmbServidor.SelectedIndexChanged += cmbServidor_SelectedIndexChanged;
             // 
             // label5
             // 
             label5.AutoSize = true;
-            label5.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            label5.Font = new Font("Segoe UI", 11.25F);
             label5.ForeColor = SystemColors.ControlText;
             label5.Location = new Point(59, 69);
             label5.Name = "label5";
@@ -346,7 +347,7 @@
             // 
             // txtConsultaVentas
             // 
-            txtConsultaVentas.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            txtConsultaVentas.Font = new Font("Segoe UI", 11.25F);
             txtConsultaVentas.Location = new Point(129, 304);
             txtConsultaVentas.Multiline = true;
             txtConsultaVentas.Name = "txtConsultaVentas";
@@ -356,7 +357,7 @@
             // label6
             // 
             label6.AutoSize = true;
-            label6.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            label6.Font = new Font("Segoe UI", 11.25F);
             label6.Location = new Point(32, 307);
             label6.Name = "label6";
             label6.Size = new Size(91, 20);
@@ -365,7 +366,7 @@
             // 
             // txtPuerto
             // 
-            txtPuerto.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            txtPuerto.Font = new Font("Segoe UI", 11.25F);
             txtPuerto.Location = new Point(129, 134);
             txtPuerto.MaxLength = 200;
             txtPuerto.Multiline = true;
@@ -376,7 +377,7 @@
             // label7
             // 
             label7.AutoSize = true;
-            label7.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            label7.Font = new Font("Segoe UI", 11.25F);
             label7.Location = new Point(71, 137);
             label7.Name = "label7";
             label7.Size = new Size(52, 20);
@@ -390,7 +391,7 @@
             btnGuardar.FlatAppearance.MouseDownBackColor = Color.FromArgb(17, 31, 52);
             btnGuardar.FlatAppearance.MouseOverBackColor = Color.FromArgb(51, 62, 80);
             btnGuardar.FlatStyle = FlatStyle.Flat;
-            btnGuardar.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            btnGuardar.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold);
             btnGuardar.ForeColor = Color.Gainsboro;
             btnGuardar.Image = (Image)resources.GetObject("btnGuardar.Image");
             btnGuardar.ImageAlign = ContentAlignment.TopCenter;
@@ -410,7 +411,7 @@
             btnModificar.FlatAppearance.MouseDownBackColor = Color.FromArgb(17, 31, 52);
             btnModificar.FlatAppearance.MouseOverBackColor = Color.FromArgb(51, 62, 80);
             btnModificar.FlatStyle = FlatStyle.Flat;
-            btnModificar.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            btnModificar.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold);
             btnModificar.ForeColor = Color.White;
             btnModificar.Image = (Image)resources.GetObject("btnModificar.Image");
             btnModificar.ImageAlign = ContentAlignment.TopCenter;
@@ -430,7 +431,7 @@
             btnCancelar.FlatAppearance.MouseDownBackColor = Color.FromArgb(17, 31, 52);
             btnCancelar.FlatAppearance.MouseOverBackColor = Color.FromArgb(51, 62, 80);
             btnCancelar.FlatStyle = FlatStyle.Flat;
-            btnCancelar.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            btnCancelar.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold);
             btnCancelar.ForeColor = Color.White;
             btnCancelar.Image = (Image)resources.GetObject("btnCancelar.Image");
             btnCancelar.ImageAlign = ContentAlignment.TopCenter;
@@ -456,7 +457,7 @@
             // label8
             // 
             label8.AutoSize = true;
-            label8.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            label8.Font = new Font("Segoe UI", 11.25F);
             label8.Location = new Point(19, 236);
             label8.Name = "label8";
             label8.Size = new Size(104, 20);
@@ -465,7 +466,7 @@
             // 
             // txtBaseDeDatos
             // 
-            txtBaseDeDatos.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            txtBaseDeDatos.Font = new Font("Segoe UI", 11.25F);
             txtBaseDeDatos.Location = new Point(129, 236);
             txtBaseDeDatos.Multiline = true;
             txtBaseDeDatos.Name = "txtBaseDeDatos";
@@ -484,7 +485,7 @@
             // 
             // txtConsultaProductos
             // 
-            txtConsultaProductos.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            txtConsultaProductos.Font = new Font("Segoe UI", 11.25F);
             txtConsultaProductos.Location = new Point(129, 270);
             txtConsultaProductos.Multiline = true;
             txtConsultaProductos.Name = "txtConsultaProductos";
@@ -494,7 +495,7 @@
             // label9
             // 
             label9.AutoSize = true;
-            label9.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            label9.Font = new Font("Segoe UI", 11.25F);
             label9.Location = new Point(9, 273);
             label9.Name = "label9";
             label9.Size = new Size(114, 20);

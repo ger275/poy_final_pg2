@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SistemaParaPrediccionDeVentas")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+35940e6111a1b7ca91d574e1d7557374b7137b7d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6963f05f5529a89002af591f220a0210eec0c066")]
 [assembly: System.Reflection.AssemblyProductAttribute("SistemaParaPrediccionDeVentas")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SistemaParaPrediccionDeVentas")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

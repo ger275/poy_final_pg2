@@ -60,7 +60,13 @@
             checkBox4 = new CheckBox();
             label1 = new Label();
             grPrediccion = new DataGridView();
-            formsPlot1 = new ScottPlot.FormsPlot();
+            frmGrafica = new ScottPlot.FormsPlot();
+            txtCosto = new TextBox();
+            txtVenta = new TextBox();
+            lblCosto = new Label();
+            lblVenta = new Label();
+            txtValorRoi = new TextBox();
+            lblValorRoi = new Label();
             panel4.SuspendLayout();
             panelTitulo.SuspendLayout();
             panel3.SuspendLayout();
@@ -176,7 +182,7 @@
             // 
             // lblTitulo
             // 
-            lblTitulo.Font = new Font("Lato", 23.9999962F, FontStyle.Bold, GraphicsUnit.Point);
+            lblTitulo.Font = new Font("Lato", 23.9999962F, FontStyle.Bold);
             lblTitulo.ForeColor = Color.Gainsboro;
             lblTitulo.Image = (Image)resources.GetObject("lblTitulo.Image");
             lblTitulo.ImageAlign = ContentAlignment.MiddleLeft;
@@ -281,17 +287,18 @@
             btnGrafica.FlatAppearance.MouseDownBackColor = Color.FromArgb(17, 31, 52);
             btnGrafica.FlatAppearance.MouseOverBackColor = Color.FromArgb(51, 62, 80);
             btnGrafica.FlatStyle = FlatStyle.Flat;
-            btnGrafica.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            btnGrafica.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold);
             btnGrafica.ForeColor = Color.White;
             btnGrafica.Image = (Image)resources.GetObject("btnGrafica.Image");
             btnGrafica.ImageAlign = ContentAlignment.TopCenter;
-            btnGrafica.Location = new Point(276, 491);
+            btnGrafica.Location = new Point(276, 518);
             btnGrafica.Name = "btnGrafica";
-            btnGrafica.Size = new Size(134, 50);
+            btnGrafica.Size = new Size(134, 70);
             btnGrafica.TabIndex = 23;
-            btnGrafica.Text = "Generar Gráfica";
+            btnGrafica.Text = "Generar Gráfica PDF";
             btnGrafica.TextAlign = ContentAlignment.BottomCenter;
             btnGrafica.UseVisualStyleBackColor = false;
+            btnGrafica.Click += btnGrafica_Click;
             // 
             // btnReporte
             // 
@@ -300,24 +307,25 @@
             btnReporte.FlatAppearance.MouseDownBackColor = Color.FromArgb(17, 31, 52);
             btnReporte.FlatAppearance.MouseOverBackColor = Color.FromArgb(51, 62, 80);
             btnReporte.FlatStyle = FlatStyle.Flat;
-            btnReporte.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            btnReporte.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold);
             btnReporte.ForeColor = Color.Gainsboro;
             btnReporte.Image = (Image)resources.GetObject("btnReporte.Image");
             btnReporte.ImageAlign = ContentAlignment.TopCenter;
-            btnReporte.Location = new Point(126, 491);
+            btnReporte.Location = new Point(126, 518);
             btnReporte.Name = "btnReporte";
-            btnReporte.Size = new Size(134, 50);
+            btnReporte.Size = new Size(134, 70);
             btnReporte.TabIndex = 22;
-            btnReporte.Text = "Generar Reporte";
+            btnReporte.Text = "Generar Reporte PDF";
             btnReporte.TextAlign = ContentAlignment.BottomCenter;
             btnReporte.UseVisualStyleBackColor = false;
+            btnReporte.Click += btnReporte_Click;
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            label4.Font = new Font("Segoe UI", 11.25F);
             label4.ForeColor = SystemColors.ControlText;
-            label4.Location = new Point(25, 274);
+            label4.Location = new Point(27, 250);
             label4.Name = "label4";
             label4.Size = new Size(102, 20);
             label4.TabIndex = 34;
@@ -326,9 +334,9 @@
             // label6
             // 
             label6.AutoSize = true;
-            label6.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            label6.Font = new Font("Segoe UI", 11.25F);
             label6.ForeColor = SystemColors.ControlText;
-            label6.Location = new Point(25, 308);
+            label6.Location = new Point(27, 284);
             label6.Name = "label6";
             label6.Size = new Size(51, 20);
             label6.TabIndex = 35;
@@ -337,9 +345,9 @@
             // cmbPeriodoHasta
             // 
             cmbPeriodoHasta.DropDownStyle = ComboBoxStyle.DropDownList;
-            cmbPeriodoHasta.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            cmbPeriodoHasta.Font = new Font("Segoe UI", 11.25F);
             cmbPeriodoHasta.FormattingEnabled = true;
-            cmbPeriodoHasta.Location = new Point(234, 276);
+            cmbPeriodoHasta.Location = new Point(236, 252);
             cmbPeriodoHasta.Name = "cmbPeriodoHasta";
             cmbPeriodoHasta.Size = new Size(220, 28);
             cmbPeriodoHasta.TabIndex = 40;
@@ -347,19 +355,20 @@
             // 
             // checkBox1
             // 
-            checkBox1.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
-            checkBox1.Location = new Point(234, 412);
+            checkBox1.Font = new Font("Segoe UI", 11F);
+            checkBox1.Location = new Point(172, 540);
             checkBox1.Name = "checkBox1";
             checkBox1.Size = new Size(220, 28);
             checkBox1.TabIndex = 42;
             checkBox1.Text = "ver valores de las ventas";
             checkBox1.UseVisualStyleBackColor = true;
+            checkBox1.Visible = false;
             // 
             // txtPeriodoDesde
             // 
             txtPeriodoDesde.Enabled = false;
-            txtPeriodoDesde.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            txtPeriodoDesde.Location = new Point(234, 310);
+            txtPeriodoDesde.Font = new Font("Segoe UI", 11.25F);
+            txtPeriodoDesde.Location = new Point(236, 286);
             txtPeriodoDesde.MaxLength = 200;
             txtPeriodoDesde.Multiline = true;
             txtPeriodoDesde.Name = "txtPeriodoDesde";
@@ -398,8 +407,8 @@
             // 
             // chkCrecimientoMensual
             // 
-            chkCrecimientoMensual.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
-            chkCrecimientoMensual.Location = new Point(234, 344);
+            chkCrecimientoMensual.Font = new Font("Segoe UI", 11F);
+            chkCrecimientoMensual.Location = new Point(236, 320);
             chkCrecimientoMensual.Name = "chkCrecimientoMensual";
             chkCrecimientoMensual.Size = new Size(220, 28);
             chkCrecimientoMensual.TabIndex = 47;
@@ -409,17 +418,18 @@
             // 
             // checkBox4
             // 
-            checkBox4.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
-            checkBox4.Location = new Point(234, 378);
+            checkBox4.Font = new Font("Segoe UI", 11F);
+            checkBox4.Location = new Point(236, 354);
             checkBox4.Name = "checkBox4";
             checkBox4.Size = new Size(220, 28);
             checkBox4.TabIndex = 48;
             checkBox4.Text = "calcular ROI";
             checkBox4.UseVisualStyleBackColor = true;
+            checkBox4.Click += checkBox4_Click;
             // 
             // label1
             // 
-            label1.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.Font = new Font("Segoe UI", 11F);
             label1.Location = new Point(27, 67);
             label1.Name = "label1";
             label1.Size = new Size(260, 23);
@@ -431,21 +441,88 @@
             grPrediccion.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
             grPrediccion.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             grPrediccion.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            grPrediccion.Location = new Point(598, 93);
+            grPrediccion.Location = new Point(587, 93);
             grPrediccion.Name = "grPrediccion";
             grPrediccion.ReadOnly = true;
             grPrediccion.RowTemplate.Height = 25;
             grPrediccion.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            grPrediccion.Size = new Size(629, 184);
+            grPrediccion.Size = new Size(637, 184);
             grPrediccion.TabIndex = 50;
             // 
-            // formsPlot1
+            // frmGrafica
             // 
-            formsPlot1.Location = new Point(549, 378);
-            formsPlot1.Margin = new Padding(4, 3, 4, 3);
-            formsPlot1.Name = "formsPlot1";
-            formsPlot1.Size = new Size(678, 184);
-            formsPlot1.TabIndex = 51;
+            frmGrafica.Font = new Font("Segoe UI", 11F);
+            frmGrafica.Location = new Point(541, 284);
+            frmGrafica.Margin = new Padding(5, 4, 5, 4);
+            frmGrafica.Name = "frmGrafica";
+            frmGrafica.Size = new Size(704, 324);
+            frmGrafica.TabIndex = 51;
+            // 
+            // txtCosto
+            // 
+            txtCosto.Font = new Font("Segoe UI", 11.25F);
+            txtCosto.Location = new Point(236, 388);
+            txtCosto.MaxLength = 200;
+            txtCosto.Multiline = true;
+            txtCosto.Name = "txtCosto";
+            txtCosto.Size = new Size(220, 28);
+            txtCosto.TabIndex = 52;
+            txtCosto.TextChanged += txtCosto_TextChanged;
+            // 
+            // txtVenta
+            // 
+            txtVenta.Font = new Font("Segoe UI", 11.25F);
+            txtVenta.Location = new Point(236, 422);
+            txtVenta.MaxLength = 200;
+            txtVenta.Multiline = true;
+            txtVenta.Name = "txtVenta";
+            txtVenta.Size = new Size(220, 28);
+            txtVenta.TabIndex = 53;
+            txtVenta.TextChanged += txtVenta_TextChanged;
+            // 
+            // lblCosto
+            // 
+            lblCosto.AutoSize = true;
+            lblCosto.Font = new Font("Segoe UI", 11.25F);
+            lblCosto.ForeColor = SystemColors.ControlText;
+            lblCosto.Location = new Point(29, 391);
+            lblCosto.Name = "lblCosto";
+            lblCosto.Size = new Size(175, 20);
+            lblCosto.TabIndex = 54;
+            lblCosto.Text = "Ingrese el valor del costo";
+            // 
+            // lblVenta
+            // 
+            lblVenta.AutoSize = true;
+            lblVenta.Font = new Font("Segoe UI", 11.25F);
+            lblVenta.ForeColor = SystemColors.ControlText;
+            lblVenta.Location = new Point(29, 425);
+            lblVenta.Name = "lblVenta";
+            lblVenta.Size = new Size(171, 20);
+            lblVenta.TabIndex = 55;
+            lblVenta.Text = "Ingrese el valor de venta";
+            // 
+            // txtValorRoi
+            // 
+            txtValorRoi.Enabled = false;
+            txtValorRoi.Font = new Font("Segoe UI", 11.25F);
+            txtValorRoi.Location = new Point(236, 456);
+            txtValorRoi.MaxLength = 200;
+            txtValorRoi.Multiline = true;
+            txtValorRoi.Name = "txtValorRoi";
+            txtValorRoi.Size = new Size(220, 28);
+            txtValorRoi.TabIndex = 56;
+            // 
+            // lblValorRoi
+            // 
+            lblValorRoi.AutoSize = true;
+            lblValorRoi.Font = new Font("Segoe UI", 11.25F);
+            lblValorRoi.ForeColor = SystemColors.ControlText;
+            lblValorRoi.Location = new Point(29, 459);
+            lblValorRoi.Name = "lblValorRoi";
+            lblValorRoi.Size = new Size(203, 20);
+            lblValorRoi.TabIndex = 57;
+            lblValorRoi.Text = "Valor del ROI para el período";
             // 
             // frmPredecirVentas
             // 
@@ -453,7 +530,13 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(104, 116, 135);
             ClientSize = new Size(1250, 616);
-            Controls.Add(formsPlot1);
+            Controls.Add(lblValorRoi);
+            Controls.Add(txtValorRoi);
+            Controls.Add(lblVenta);
+            Controls.Add(lblCosto);
+            Controls.Add(txtVenta);
+            Controls.Add(txtCosto);
+            Controls.Add(frmGrafica);
             Controls.Add(grPrediccion);
             Controls.Add(label1);
             Controls.Add(checkBox4);
@@ -461,7 +544,6 @@
             Controls.Add(grProductosAgregados);
             Controls.Add(grProductosAgregar);
             Controls.Add(txtPeriodoDesde);
-            Controls.Add(checkBox1);
             Controls.Add(cmbPeriodoHasta);
             Controls.Add(label6);
             Controls.Add(label4);
@@ -471,6 +553,7 @@
             Controls.Add(panel3);
             Controls.Add(panelTitulo);
             Controls.Add(panel4);
+            Controls.Add(checkBox1);
             FormBorderStyle = FormBorderStyle.None;
             Name = "frmPredecirVentas";
             StartPosition = FormStartPosition.CenterScreen;
@@ -520,6 +603,12 @@
         private CheckBox checkBox4;
         private Label label1;
         private DataGridView grPrediccion;
-        private ScottPlot.FormsPlot formsPlot1;
+        private ScottPlot.FormsPlot frmGrafica;
+        private TextBox txtCosto;
+        private TextBox txtVenta;
+        private Label lblCosto;
+        private Label lblVenta;
+        private TextBox txtValorRoi;
+        private Label lblValorRoi;
     }
 }
